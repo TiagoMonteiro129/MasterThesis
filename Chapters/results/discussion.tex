@@ -1,0 +1,41 @@
+
+		We will discuss the results in order of the Research Question.
+	    \subsubsection{RQ1}
+
+	Beginning with the \textit{RQ1}, we will start talking about energy consumption on the Package level. As we can observe in figure \ref{fig:medianenergy}. Redis is the most consumption DBMS of the 4 DBMS follow by Postgres, MariaDB, and Mysql. We can see that all rational DBMS have energy consumption on the package very low comparing with the non-rational DBMS Redis.
+	
+	In terms of the distribution of the values, we can see in Figure \ref{fig:bocplotyenergy} that the distribution on the package level is very small on the relational databases, and only on Redis have a big distribution on the energy in the values. 
+	
+	On the Disk Level, as viewed in figure \ref{fig:medianenergy}, we can see the reverse of Package level happen, where the rational DBMS spending more energy and the non-rational consumption being the one that spent less. In this case, Mysql was the DBMS that spent more than MariaDB, Postgres, and Redis.
+	
+	On the disk, we can also see that there is almost no variation of results on the Redis and the same case scenario on the Postgres. But the distribution in MySQL and MariaDB is broad that while the median in MySQL is higher, some results are lower than the MariaDB median.
+	
+	In terms of total energy consumption even though Redis spent more than the others in the Package level, the energy he saves on the disk makes it the least expensive one, follow by MariaDB, Postgres, and Redis.  That happens because the secondary storage has a more significant overall impact on the total energy than the Package.
+	
+    \subsubsection{RQ2}
+
+	
+	Now with the \textit{RQ2}, As seen in Figure \ref{fig:medianhammerdb}, we can see that the non-relational DBMS Redis have a performance in terms of TPM, way better than the relational DBMS. We can also see that the ones with less consumption in the disk have a better performance overall. 
+	
+	In Terms of TPM per joules on the package, disk, and total, as seen in figure \ref{fig:medianenergyhammerdb}, it follows the same trend of the most expensive in terms of energy consumption where the Mysql is the most expensive followed by MariaDB, Postgres, and Redis. The distribution of these values in figure \ref{fig:bocplottrans} show that Mysql is always the most expensive followed by MariaDB, Postgres, and Redis.
+	
+	When talking about NOPM, as we can see in figure \ref{fig:medianenergyhammerdb} Postgres is the most with more new orders per minute, then MariaDB and Redis have the same number of NOPM and the lowest is Mysql. In terms of the distribution of these results, even though MariaDB and Redis have the same median Redis has a larger distribution as we can see in figure \ref{fig:bocplothammer}.
+	
+	In Terms of NOPM per joules, we can see the median in Figure \ref{fig:mediannopmenergy} that in the package the one with the most NOPM per Joules is Redis then Mysql, MariaDB, and Postgres. On the disk the one with the most NOPM per joules is Mysql then MariaDB, Redis, and finally Postgres. When talking of the system as a whole the Mysql is the one with the NOPM per joule, follow by MariaDB, Redis, and Postgres. This result doesn't follow any trend of the rational database being the most expensive or non relational database being the less expensive in any of the cases.
+
+    \subsubsection{RQ3}
+    
+    First, we gonna analyze the energy consumption with the increase of the users as seen in Figure \ref{fig:vuyenergy}, in the package Redis, which have decreased with 8 users after that decrease have a large increase with 32 users follow by another decrease. The other databases have an increase in energy with the increase of the users.
+    
+    In the case of disk, MariaDB has an increase with the increase of users, Postgres also had an increase, MySQL has a decrease in energy, and Redis also had a decrease. And with these variations when we increase the number of users the MariaDB is the most expensive followed by Postgres, Mysql, and Redis.
+    
+    On a general view, Redis has the same pattern as in the disk being the lowest in terms of energy consumption except on 32 users, where the increase in Package has a large impact on the energy and putting in the second-lowest behind Mysql. Mysql with an increase of the users start to lower is energy consumption becoming the second-lowest energy consumption DBMS expect on 32 users where he is the lowest. The second highest is Postgres that have a small increase with the increase of users. Finally, MariaDB with the increase of users become the highest.   
+    
+    When we talk about the performance on the hammerdb benchmark as seen in figure \ref{fig:vuhammer}, first we can see all that bases had an increase of TPM and NOPM with an increase in the number of users. The only instance that had a decrease was from 32 to 128 users on Redis. With the increase of users, Redis still stay the Database with better TPM and NOPM and Mysql stays the worse, while Postgres with an increase of users start to get worse results comparing with MariaDB.
+    
+    When we talk about energy consumption per TPM as seen in Figure \ref{fig:vuyenergytpm}, we can see with the increase of users that Redis have a better "speed up" in terms of energy per TPM, in general, all the databases improve very well even though that MariaDB is the relational database with the better improves.
+    
+    Finally, in the Figure \ref{fig:vuyenergynopm} we can check the energy consumption per NOPM, We can see that all DBMS improve very well and we can see that Redis became the most efficient on energy consumption per NOPM with the increase of users, follow by MariaDB, Postgres, and Mysql.
+    
+    We can conclude that with the increase of virtual users that the nonrelational database Redis start to get better results on NOPM and TPM without a large increase in energy consumption making Redis the most scalable one. In terms of the Relational database, we saw that MariaDB had the most increase in hammerdb performance and in energy consumption per TPM and PM.
+    
