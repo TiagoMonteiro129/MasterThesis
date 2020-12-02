@@ -1,0 +1,46 @@
+
+\subsection{Benchmark}
+
+Benchmarks are techniques that seek to collect and compare a wide variety of activities, to achieve the best result, an objective criterion for determining which practice or software is superior in certain scenarios that the user who
+is doing the simulation built. An example of popular questions is "Which domain is the best system?”. The SPECCpu benchmark ~\cite{henning2006spec}, for instance, addresses the question, "What is the best CPU?" "and the \gls{tpcc} ~\cite{council2010tpc} responds to the question, "What is the best OLTP database system?” ~\cite{benchmarkchen}.
+
+For ~\citeauthor{gray} a domain-specific benchmark must meet four important criteria to be a useful benchmark. It must be:
+
+\begin{itemize}
+    \item \textbf{Relevant:} In performing typical operations within that problem domain, it must measure the peak performance and price/performance of systems. 
+    \item \textbf{Portable:} It should be easy to implement the benchmark on many different systems and architectures.
+    \item \textbf{Scaleable:}  The benchmark should apply to computer systems small and large. As computer performance and architecture evolve, it should be possible to scale the benchmark up to bigger systems and to parallel computer systems.
+    \item \textbf{Simple:} The benchmark must be understandable, otherwise credibility will be lacking.
+\end{itemize}
+
+
+
+%For conducting the measurements of the energy spent, we need first a benchmark tool that can be a load generator system that can emulate a real environment in \gls{dbms}.
+
+\subsubsection{TPC Benchmark C}
+\glsfirst{tpcc} is an \gls{oltp} workload~\cite{council2010tpc}. It is a mixture of read-only and update intensive transactions that simulate the activities found in complex \gls{oltp} application environments. It does so by exercising a breadth of system components associated with such environments, which are characterized by:
+
+\begin{itemize}
+    \item The simultaneous execution of multiple transaction types that span a breadth of complexity
+    \item On-line and deferred transaction execution modes
+    \item Multiple on-line terminal sessions
+    \item Moderate system and application execution time
+    \item Significant disk input/output
+    \item Transaction integrity (\gls{acid} properties)
+    \item Non-uniform distribution of data access through primary and secondary keys
+    \item Databases consisting of many tables with a wide variety of sizes, attributes, and relationships
+    \item Contention on data access and update
+\end{itemize}
+
+While these specifications express implementation in terms of the relational data model with a traditional locking framework, any commercially available \gls{dbms}, database servers, file systems, or other data repositories offering a functionally equivalent implementation can be used to implement the database.
+
+\gls{tpcc} uses metrics and terminology that are similar to other benchmarks originating from the TPC or others. In no way does this similarity in terminology imply that the results of \gls{tpcc} are comparable to other benchmarks. Other \gls{tpcc} results compliant with the same revision are the only benchmark results comparable to \gls{tpcc}.
+
+The performance metric reported by \gls{tpcc} is a "business throughput" measuring the number of orders processed per minute. Multiple transactions are used to simulate the business activity of processing an order, and each transaction is subject to a response time constraint. The performance metric for this benchmark is expressed in \gls{tpmc}. 
+
+\gls{tpcc} is accepted in the industry as the most credible transaction processing benchmark with a large body of results across all major hardware and database platforms. The highly tuned and optimized nature of the \gls{tpcc} configurations makes it the best candidate for study \gls{dbms} power consumption~\cite{powerconsumptiontppc}.
+
+\subsubsection{HammerDB}
+
+
+\input{Design/hammerdb}

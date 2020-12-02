@@ -1,0 +1,46 @@
+
+% This command will provide the same effect as the Creative Commons
+%copyright and Statement of Integrity. However feel free to use whatever
+%you want
+\newcommand{\printcustomcopyrightpage}[3]{%
+ 
+ \cleardoublepage%
+ \thispagestyle{empty}
+ \mbox{}
+ \AddToShipoutPictureFG*{% Add only to the ForeGround of this page
+     \AtPageCenter{% lower-left anchor at Page Center
+       \makebox[0pt]{% horizontally centered anchor
+         \parbox{\textwidth}{%
+          \begin{center}
+           \textbf{#1}
+          \end{center}\par%
+  \bigskip%
+  #2\par% 
+  \vskip 1ex%
+  #3\par
+  \vskip\baselineskip%
+         }% Necessarily vertically centered anchor
+       }%
+     }%
+   }%
+   \cleardoublepage%
+ }
+
+
+
+% Here is the command call. The first parameter is a title. The second is
+% a copyright string and the third is your custom license text. This example
+% uses some macros to show that they exist and you can use them.
+% like \thetitle, \theauthorname and \textcopyright symbol.
+
+ \printcustomcopyrightpage{COPYRIGHT of \thetitle}%
+ {\emph{Copyright \textcopyright\ \theauthorname,
+ Escola de Engenharia, Universidade do Minho.}}%
+ {The Escola de Engenharia
+   and the Universidade do Minho have the right, perpetual and without
+   geographical boundaries, to file and publish this dissertation through
+   printed copies reproduced on paper or on digital form, or by any other
+   means known or that may be invented, and to disseminate through
+   scientific repositories and admit its copying and distribution for
+ non-commercial, educational or research purposes, as long as credit is
+ given to the author and editor.}%

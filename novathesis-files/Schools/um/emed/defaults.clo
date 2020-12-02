@@ -1,0 +1,395 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% defaults.clo
+%% NOVA thesis configuration file
+%%
+%% Costumization for UM-MED (strings and cover)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{upquote}
+% University
+\university[pt]={Universidade do Minho}
+\university[en]={Universidade do Minho}
+
+% Faculty / School
+\faculty[pt]={Escola de Medicina}
+\faculty[en]={Escola de Medicina}
+
+% Scientific field
+\mynewdata{phdmajorfield}
+\phdmajorfield[pt]={Informática}
+\phdmajorfield[en]={Computer Science}
+\majorfield[pt]={Engenharia Informática}
+\majorfield[en]={Informatics Engineering}
+
+% Department
+\department[pt]={Departamento de Informática}
+\department[en]={Department of Informatics}
+
+% Comiittee printing order
+\committeeorder[all]={c,r,a,m}%
+
+% Cover background images
+\thesiscover[phd,front]={}
+\thesiscover[phdplan,front]={}
+\thesiscover[phdprop,front]={}
+\thesiscover[msc,front]={}
+\thesiscover[mscplan,front]={}
+\thesiscover[bsc,front]={}
+\thesiscover[plain,front]={}
+
+% Set margins for "normal" pages
+\margin[screen,top]={2.5cm}
+\margin[screen,bottom]={2.5cm}
+\margin[screen,left]={2.5cm}
+\margin[screen,right]={2.5cm}
+\margin[paper,top]={2.5cm}
+\margin[paper,bottom]={2.5cm}
+\margin[paper,left]={2.5cm}
+\margin[paper,right]={2.5cm}
+
+% Set margins for "normal" pages
+\margin[screen,top]={2.5cm}
+\margin[screen,bottom]={2.5cm}
+\margin[screen,left]={2.5cm}
+\margin[screen,right]={2.5cm}
+\margin[paper,top]={2.5cm}
+\margin[paper,bottom]={2.5cm}
+\margin[paper,left]={2.5cm}
+\margin[paper,right]={2.5cm}
+
+% Set margins for cover pages
+\margin[phd,top]={0cm}
+\margin[phd,bottom]={1cm}
+\margin[phd,left]={18.5em}
+\margin[phd,right]={0cm}
+\margin[phdplan,top]={0cm}
+\margin[phdplan,bottom]={1cm}
+\margin[phdplan,left]={18.5em}
+\margin[phdplan,right]={0cm}
+\margin[phdprop,top]={0cm}
+\margin[phdprop,bottom]={1cm}
+\margin[phdprop,left]={18.5em}
+\margin[phdprop,right]={0cm}
+\margin[msc,top]={0cm}
+\margin[msc,bottom]={1cm}
+\margin[msc,left]={18.5em}
+\margin[msc,right]={0cm}
+\margin[mscplan,top]={0cm}
+\margin[mscplan,bottom]={1cm}
+\margin[mscplan,left]={18.5em}
+\margin[mscplan,right]={0cm}
+\margin[bsc,top]={0cm}
+\margin[bsc,bottom]={1cm}
+\margin[bsc,left]={18.5em}
+\margin[bsc,right]={0cm}
+\margin[plain,top]={2.5cm}
+\margin[plain,bottom]={2.5cm}
+\margin[plain,left]={2.5cm}
+\margin[plain,right]={2.5cm}
+%
+
+
+\degreestr[bsc,m,en]={Bachelor}
+\degreestr[bsc,f,en]={Bachelor}
+\degreestr[msc,m,en]={Master of Engineering}
+\degreestr[msc,f,en]={Master of Engineering}
+\degreestr[mscplan,m,en]={Master of Engineering}
+\degreestr[mscplan,f,en]={Master of Engineering}
+\degreestr[phd,m,en]={Doctor of Philosophy}
+\degreestr[phd,f,en]={Doctor of Philosophy}
+\degreestr[phdplan,m,en]={Doctor of Philosophy}
+\degreestr[phdplan,f,en]={Doctor of Philosophy}
+\degreestr[phdprop,m,en]={Doctor of Philosophy}
+\degreestr[phdprop,f,en]={Doctor of Philosophy}
+
+\docdegreestr[bsc,en]={Bachelor's Report}
+\docdegreestr[msc,en]={Master's Dissertation}
+\docdegreestr[mscplan,en]={Master's Pre-Dissertation Report}
+\docdegreestr[phdplan,en]={Doctoral Thesis Qualification}
+\docdegreestr[phdprop,en]={Doctoral Thesis Dissertation Planning}
+\docdegreestr[phd,en]={Doctoral Thesis}
+
+%\docdegreestr[bsc,pt]={Projeto de Licenciatura}
+\docdegreestr[mscplan,pt]={Relatório Preliminar de Dissertação de Mestrado}
+\docdegreestr[msc,pt]={Dissertação de Mestrado}
+\docdegreestr[phdplan,pt]={Plano de Tese de Doutoramento}
+\docdegreestr[phdprop,pt]={Proposta de Tese de Doutoramento}
+\docdegreestr[phd,pt]={Tese de Doutoramento}
+
+
+%\dissertationstr[bsc,pt]={Relatório para obtenção do Grau de %
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+
+
+\dissertationstr[mscplan,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[mscplan,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master's  in \themajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[msc,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[msc,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master's  in  \themajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[phdplan,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phdprop,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phd,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[phdplan,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phdprop,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phd,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
+
+
+
+\mynewdata{copyrightlabel}
+
+\copyrightlabel[pt]={Licença concedida aos utilizadores deste trabalho}
+\copyrightlabel[en]={License granted to the users of this work}
+
+\newcommand{\licenseThis}{%
+\normalsize{\textit{\textbf{\thecopyrightlabel[\novathesis@opt@coverlang]}}}\\
+
+\doclicenseImage\\[0.5mm]%
+\normalsize\textbf{\doclicenseLongName}\\[0.5mm]
+\normalsize\textbf{\doclicenseName}\\[2ex]
+\small\url{\doclicenseURL}
+}
+
+\copyrighttextstr[pt]={\begin{center}{\textbf{DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS}}\end{center} \hspace{\parindent} Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.\\[1ex] \rule{\parindent}{0pt} Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo
+indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não previstas no licenciamento indicado, deverá contactar o autor, através do RepositoriUM da \theuniversity[\novathesis@opt@coverlang].\\[1cm]\licenseThis}
+
+
+\copyrighttextstr[en]={\noindent\begin{center}{\textbf{COPYRIGHT AND TERMS OF USE OF THIS WORK BY A THIRD PARTY}}\end{center} \hspace{\parindent} This is academic work that can be used by third parties as long as internationally accepted rules and good practices regarding copyright and related rights are respected. \\[1ex] \rule{\parindent}{0pt} Accordingly, this work may be used under the license provided below.\\[1ex] \rule{\parindent}{0pt} If the user needs permission to make use of the work under conditions not provided for in the indicated licensing, they should contact the author through the RepositoriUM of \theuniversity[\novathesis@opt@coverlang].\\[1cm]\licenseThis}
+
+
+\mynewdata{statementofintegritytextstr}
+
+
+\statementofintegritytextstr[pt]={\begin{center}{\textbf{DECLARAÇÃO DE INTEGRIDADE}}\end{center} \hspace{\parindent} Declaro ter atuado com integridade na elaboração do presente trabalho académico e confirmo que não recorri à prática de plágio nem a qualquer forma de utilização indevida ou falsificação de informações ou resultados em nenhuma das etapas conducente à sua elaboração.\\[1ex] \rule{\parindent}{0pt} Mais declaro que conheço e que respeitei o Código de Conduta Ética da \theuniversity[\novathesis@opt@coverlang].}
+
+
+\statementofintegritytextstr[en]={\begin{center}{\textbf{STATEMENT OF INTEGRITY}}\end{center} \hspace{\parindent} I hereby declare having conducted this academic work with integrity. I confirm that I have not used plagiarism or any form of undue use of information or falsification of results along the process leading to its elaboration.\\[1ex] \rule{\parindent}{0pt} I further declare that I have fully acknowledged the Code of Ethical Conduct of the \theuniversity[\novathesis@opt@coverlang].}
+
+\mynewdata{signatureline}
+\signatureline[en]={\makebox[0.1\textwidth]{\hrulefill},
+\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
+(Location)} \makebox[0.4\textwidth]{\footnotesize (Date)}
+\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
+
+\signatureline[pt]={\makebox[0.1\textwidth]{\hrulefill},
+\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
+(Localização)} \makebox[0.4\textwidth]{\footnotesize (Data)}
+\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IST guidelines:
+% The pages should be numbered consecutively at the bottom centre of the
+% page.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makepagestyle{novathesis@myvf}
+\makeoddfoot{novathesis@myvf}{}{\thepage}{}
+\makeevenfoot{novathesis@myvf}{}{\thepage}{}
+\makeheadrule{novathesis@myvf}{\textwidth}{\normalrulethickness}
+\makeevenhead{novathesis@myvf}{\small\textsc{\leftmark}}{}{}
+\makeoddhead{novathesis@myvf}{}{}{\small\textsc{\rightmark}}
+\pagestyle{novathesis@myvf}
+%
+\frenchspacing
+
+% Fazer indentação parágrafos
+\setlength{\parindent}{17pt}
+
+% Corrigir distância entre número de secção (e.g. ``3.10'' e título da mesma)
+% Para ver info no manual, procurar por cftKnumwidth em que K é o tipo da entrada (capítulo, section, ...)
+% \setlength{\cftsectionnumwidth}{1.2\cftsectionnumwidth}
+% \setlength{\cftfigurenumwidth}{1.2\cftfigurenumwidth}
+% \setlength{\cftlistingnumwidth}{1.2\cftlistingnumwidth}
+% \setlength{\cftchapternumwidth}{1.2\cftchapternumwidth}
+
+% Corrigir espaço para páginas com numeração romana na ToC
+\renewcommand{\@pnumwidth}{2em}
+
+% Espaçamento entre entradas na ToC
+% \setlength{\cftbeforesectionskip}{2mm}
+% \setlength{\cftbeforesubsectionskip}{2mm}
+% \setlength{\cftbeforefigureskip}{2mm}
+% \setlength{\cftbeforelistingskip}{2mm}
+% \setlength{\cftbeforetableskip}{2mm}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % String re-definition; original definitions in string-X.clo
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ % Use array helper defined in novathesis.csl
+ \mynewdata{adviserslabel}
+
+
+ \adviserslabel[pt]={Trabalho efetuado sob a orientação do(a)}
+ \adviserslabel[en]={Work supervised by}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Draw the cover page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{med}{cmyk}{0.0,0.24,0.94,0.0}
+\definecolor{um}{cmyk}{0.25,1.00,0.95,0.20}
+\definecolor{lightGray}{gray}{0.92}
+\definecolor{verylightgray}{cmyk}{0,0,0,0.05}
+
+
+\gdef\umc{um}
+\gdef\schoolc{med}
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+% UM_ENg Logo
+\def\UMUOEI[#1]#2{\begin{tikzpicture}[
+	% bars styling,
+	bar/.style={rectangle,fill=white,rounded corners=0.08cm,minimum width=0.16cm,inner sep=0pt},
+	umBig/.style={minimum height=0.74cm},
+	umSmall/.style={minimum height=0.48cm},
+	engBar/.style={minimum height=0.86cm},
+	umLogoPosition/.style={xshift=1.3cm,yshift=1.3cm},
+	engLogoPosition/.style={xshift=3.9cm,yshift=1.3cm}]
+
+	% Uminho logo
+	\fill[fill=#1] (0,0) -- (2.6,0) -- (2.6,2.6) -- (0,2.6) -- cycle;
+	\foreach \i in {1,...,3}{
+		\node at (\i*120+30:0.45)[bar,umBig,umLogoPosition,rotate=\i*120-60]{};
+		\node at (\i*120+90:0.60)[bar,umSmall,umLogoPosition,rotate=\i*120]{};
+	}
+	% MedUminho logo
+	\fill[fill=#2] (2.6,0) -- (5.2,0) -- (5.2,2.6) -- (2.6,2.6) -- cycle;
+\begin{scope}[fill=white, xscale=-1, yscale=1, shift={(-2.6, 2.6)}, rotate=180]
+\path[fill] (1.2803,2.2237) .. controls (1.2547,2.2141) and (1.2384,2.1987) .. (1.2302,2.1768) .. controls (1.2254,2.1643) and (1.2254,2.1587) .. (1.2259,1.9866) -- (1.2266,1.8092) -- (1.2321,1.7983) .. controls (1.2540,1.7562) and (1.3065,1.7415) .. (1.3462,1.7668) .. controls (1.3525,1.7709) and (1.3614,1.7793) .. (1.3660,1.7856) .. controls (1.3826,1.8084) and (1.3821,1.8019) .. (1.3814,1.9945) -- (1.3807,2.1679) -- (1.3744,2.1811) .. controls (1.3614,2.2083) and (1.3364,2.2249) .. (1.3060,2.2261) .. controls (1.2962,2.2266) and (1.2856,2.2256) .. (1.2803,2.2237) -- cycle;
+
+
+
+  \path[fill] (1.0869,2.0309) .. controls (1.0766,2.0275) and (1.0183,2.0018) .. (0.9971,1.9914) .. controls (0.9820,1.9840) and (0.9668,1.9683) .. (0.9598,1.9529) .. controls (0.9560,1.9442) and (0.9548,1.9368) .. (0.9548,1.9211) .. controls (0.9548,1.9033) and (0.9557,1.8987) .. (0.9617,1.8864) .. controls (0.9774,1.8554) and (1.0133,1.8371) .. (1.0453,1.8438) .. controls (1.0564,1.8462) and (1.1199,1.8730) .. (1.1464,1.8864) .. controls (1.1611,1.8939) and (1.1731,1.9059) .. (1.1813,1.9218) .. controls (1.1902,1.9387) and (1.1909,1.9690) .. (1.1827,1.9868) .. controls (1.1690,2.0164) and (1.1464,2.0321) .. (1.1146,2.0335) .. controls (1.1038,2.0340) and (1.0927,2.0330) .. (1.0869,2.0309) -- cycle;
+
+
+
+  \path[fill] (1.0135,1.7986) .. controls (0.9781,1.7877) and (0.9557,1.7569) .. (0.9557,1.7196) .. controls (0.9557,1.6943) and (0.9748,1.6652) .. (0.9991,1.6527) .. controls (1.0051,1.6498) and (1.0554,1.6267) .. (1.1110,1.6014) .. controls (1.1666,1.5761) and (1.2203,1.5518) .. (1.2302,1.5472) .. controls (1.2401,1.5427) and (1.2646,1.5316) .. (1.2844,1.5227) .. controls (1.3171,1.5080) and (1.4541,1.4459) .. (1.4926,1.4281) .. controls (1.5477,1.4030) and (1.5602,1.3994) .. (1.5812,1.4035) .. controls (1.6067,1.4083) and (1.6269,1.4232) .. (1.6385,1.4461) .. controls (1.6445,1.4584) and (1.6455,1.4627) .. (1.6455,1.4805) .. controls (1.6455,1.4979) and (1.6445,1.5029) .. (1.6390,1.5142) .. controls (1.6288,1.5349) and (1.6115,1.5492) .. (1.5829,1.5605) .. controls (1.5776,1.5626) and (1.5641,1.5687) .. (1.5528,1.5739) .. controls (1.5415,1.5792) and (1.5090,1.5942) .. (1.4806,1.6069) .. controls (1.4522,1.6199) and (1.4209,1.6341) .. (1.4112,1.6385) .. controls (1.4014,1.6430) and (1.3932,1.6466) .. (1.3927,1.6466) .. controls (1.3922,1.6466) and (1.3802,1.6522) .. (1.3657,1.6589) .. controls (1.3515,1.6659) and (1.3315,1.6748) .. (1.3217,1.6791) .. controls (1.3017,1.6878) and (1.2328,1.7189) .. (1.2085,1.7302) .. controls (1.1999,1.7343) and (1.1881,1.7398) .. (1.1820,1.7425) .. controls (1.1760,1.7451) and (1.1479,1.7579) .. (1.1195,1.7706) .. controls (1.0910,1.7836) and (1.0636,1.7957) .. (1.0583,1.7974) .. controls (1.0484,1.8010) and (1.0236,1.8014) .. (1.0135,1.7986) -- cycle;
+
+
+
+  \path[fill] (1.2848,1.4466) .. controls (1.2641,1.4418) and (1.2468,1.4288) .. (1.2350,1.4093) -- (1.2266,1.3953) -- (1.2259,1.1806) -- (1.2254,0.9659) -- (1.2304,0.9519) .. controls (1.2367,0.9353) and (1.2523,0.9184) .. (1.2699,0.9100) .. controls (1.2800,0.9050) and (1.2856,0.9040) .. (1.3036,0.9040) .. controls (1.3217,0.9040) and (1.3270,0.9050) .. (1.3359,0.9095) .. controls (1.3537,0.9189) and (1.3667,0.9317) .. (1.3739,0.9473) -- (1.3806,0.9618) -- (1.3814,1.1729) -- (1.3819,1.3838) -- (1.3768,1.3978) .. controls (1.3688,1.4192) and (1.3491,1.4377) .. (1.3279,1.4442) .. controls (1.3106,1.4495) and (1.2997,1.4502) .. (1.2848,1.4466) -- cycle;
+
+
+
+  \path[fill] (1.5227,1.3486) .. controls (1.4367,1.3111) and (1.4317,1.3077) .. (1.4184,1.2807) .. controls (1.4129,1.2694) and (1.4120,1.2646) .. (1.4122,1.2470) .. controls (1.4122,1.2222) and (1.4177,1.2085) .. (1.4346,1.1917) .. controls (1.4507,1.1755) and (1.4683,1.1693) .. (1.4938,1.1705) .. controls (1.5119,1.1714) and (1.5159,1.1729) .. (1.5610,1.1931) .. controls (1.6151,1.2174) and (1.6277,1.2263) .. (1.6387,1.2490) .. controls (1.6447,1.2610) and (1.6455,1.2653) .. (1.6452,1.2844) .. controls (1.6450,1.3048) and (1.6445,1.3067) .. (1.6363,1.3209) .. controls (1.6204,1.3474) and (1.5978,1.3602) .. (1.5665,1.3602) .. controls (1.5511,1.3602) and (1.5463,1.3590) .. (1.5227,1.3486) -- cycle;
+
+
+
+  \path[fill] (1.0906,1.1594) .. controls (1.0749,1.1551) and (0.9971,1.1199) .. (0.9858,1.1122) .. controls (0.9743,1.1043) and (0.9697,1.0995) .. (0.9637,1.0881) .. controls (0.9512,1.0655) and (0.9505,1.0376) .. (0.9615,1.0147) .. controls (0.9692,0.9993) and (0.9808,0.9875) .. (0.9976,0.9784) .. controls (1.0085,0.9721) and (1.0123,0.9714) .. (1.0316,0.9714) -- (1.0532,0.9716) -- (1.1019,0.9933) .. controls (1.1288,1.0053) and (1.1543,1.0181) .. (1.1592,1.0217) .. controls (1.2083,1.0593) and (1.1938,1.1397) .. (1.1346,1.1580) .. controls (1.1168,1.1635) and (1.1062,1.1638) .. (1.0905,1.1594) -- cycle;
+
+
+
+  \path[fill] (1.0073,0.9331) .. controls (0.9680,0.9204) and (0.9449,0.8760) .. (0.9567,0.8366) .. controls (0.9608,0.8231) and (0.9726,0.8053) .. (0.9827,0.7971) .. controls (0.9887,0.7923) and (1.0207,0.7771) .. (1.1695,0.7087) .. controls (1.2145,0.6880) and (1.2294,0.6852) .. (1.2528,0.6919) .. controls (1.2769,0.6989) and (1.2896,0.7099) .. (1.3026,0.7343) .. controls (1.3075,0.7434) and (1.3084,0.7485) .. (1.3084,0.7668) .. controls (1.3084,0.7918) and (1.3038,0.8043) .. (1.2892,0.8207) .. controls (1.2795,0.8313) and (1.2704,0.8361) .. (1.1929,0.8715) .. controls (1.1705,0.8818) and (1.1303,0.9004) .. (1.1038,0.9124) .. controls (1.0578,0.9338) and (1.0549,0.9348) .. (1.0364,0.9355) .. controls (1.0243,0.9360) and (1.0133,0.9353) .. (1.0072,0.9331) -- cycle;
+
+
+
+  \path[fill] (1.2848,0.6546) .. controls (1.2629,0.6493) and (1.2425,0.6329) .. (1.2321,0.6120) .. controls (1.2268,0.6009) and (1.2266,0.5987) .. (1.2259,0.5190) .. controls (1.2254,0.4490) and (1.2259,0.4360) .. (1.2290,0.4259) .. controls (1.2350,0.4081) and (1.2487,0.3924) .. (1.2665,0.3828) .. controls (1.2805,0.3753) and (1.2839,0.3743) .. (1.3012,0.3743) .. controls (1.3144,0.3743) and (1.3243,0.3758) .. (1.3325,0.3789) .. controls (1.3482,0.3852) and (1.3679,0.4037) .. (1.3749,0.4196) .. controls (1.3804,0.4319) and (1.3807,0.4340) .. (1.3814,0.5118) .. controls (1.3821,0.5891) and (1.3819,0.5917) .. (1.3768,0.6057) .. controls (1.3689,0.6271) and (1.3494,0.6456) .. (1.3279,0.6522) .. controls (1.3106,0.6574) and (1.2998,0.6582) .. (1.2849,0.6546) -- cycle;
+
+
+\end{scope}
+
+\end{tikzpicture}}
+\def\optionaladvisers#1{\ifnum\hide=1\relax\else{#1}\fi}
+
+
+% LOGO
+\coveritem[l]{0cm}{%
+\UMUOEI[\umc]{\schoolc}
+}
+
+% University and School
+\coveritem[l]{0.7cm}{%
+  \fontsize{14.8}{13.5}\selectfont%
+  \textbf{\theuniversity[\novathesis@opt@coverlang]}\\%
+  \fontsize{14.8}{13.5}\selectfont%
+  \newsgottl{\thefaculty[\novathesis@opt@coverlang]}\\%
+}
+
+
+
+% Author name and Title of Dissertation
+\coveritem[l]{10.5em}{%
+  \linespread{1.0}
+  \fontsize{17pt}{20.4pt}\selectfont{%
+  \theauthorname\\[2.7ex]%
+  %\fontsize{17pt}{20.4pt}\selectfont%
+  \textbf{\covertitle}}%
+}
+
+
+% Advisers
+\coveritem[l]{2}{%
+\optionaladvisers{
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \thedissertationstr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\\[6mm]%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \theadviserslabel[\novathesis@opt@coverlang]\\%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \textbf{\printadvisersaslist}%
+\\\rule{0pt}{6mm}
+    }
+}
+
+
+
+% Committee — only print the committee for the main classes
+\coveritem[c]{1}{%
+  \ifthenelse{%
+    \equal{\novathesis@opt@docdegree}{bsc}%
+    \OR\equal{\novathesis@opt@docdegree}{msc}%
+    \OR\equal{\novathesis@opt@docdegree}{phd}}%
+  {
+  \committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
+  \commiteememberstrfont[\novathesis@opt@coverlang]={\bfseries}%
+  \fontsize{11}{11}\selectfont\printcommittee%
+  }%
+  {}%
+}
+
+
+% Date
+\coveritem[l]{1}{%
+  \fontsize{10}{10}\selectfont%
+  \ifdraftdoc%
+  DRAFT: \today%
+  \else%
+  \thedatemonth, \thedateyear%
+  \fi%
+}

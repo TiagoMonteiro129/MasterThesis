@@ -1,0 +1,25 @@
+After having Relational databases dominated the software industry for a long time, the advantage that they have is of being well structured with strong data store structures, concurrency control and interfaces. 
+%MELHOR ligação entre as frases
+
+We decide to choose the 3 of the most trendy relational databases that Hammerdb could support and one non-relational database.~\cite{DBR}.
+The DBMS chosen where:
+\begin{itemize}
+  \item Mysql : explicar e Motivos a frente
+  \item Postgres : explicar e Motivos a frente
+  \item MariaDB : explicar e Motivos a frente
+  \item Redis : explicar e Motivos a frente
+\end{itemize}
+
+For consistency reasons, we use the TPC-C model provided by hammerdb and apply to every database. 
+%nao tenho acerteza se devo por esta parte
+
+In the TPC-C database model, a wholesale parts supplier operates out of a number of warehouses and their associated sales districts. 
+In this model, each warehouse has to supply ten sales districts, and each district serves three thousand customers. An operator in a sales district can choose one of the five operations or transactions provided by the order-entry system of the Business at any time.  The frequency of the individual transactions, like the transactions themselves, is based on practical scenarios.
+
+For simplification reasons we decide to play this configuration to our model:
+
+\input{tables/databaseconfig}
+
+%TPPC WEBSITE REF???
+
+Another cautions we did to have more reliable results was to mount the DBMS on this disk because we don't want the operating system interfering on our measurements.

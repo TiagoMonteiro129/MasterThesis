@@ -1,0 +1,20 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+\centering
+\caption{RAPL power domains supported by different models}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\multirow{ }{Model }{} & \multicolumn{5}{c|}{Power domain supported} \\ \cline{2-6} 
+                       & PKG    & PPO    & PP1    & DRAM    & PSYs   \\ \hline
+Sandy Bridge           & YES    & YES    & YES    & NO      & NO     \\
+Sandy Bridge-EP        & YES    & YES    & NO     & YES     & NO     \\
+Haswell                & YES    & YES    & YES    & YES     & NO     \\
+Haswell-EP             & YES    & NO     & NO     & YES     & NO     \\
+Skylake                & YES    & YES    & YES    & YES     & YES*   \\ \hline
+\end{tabular}
+\label{tab:rapltable}
+\newline
+*Not All Skylake versions support PSys
+
+\end{table}

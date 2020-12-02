@@ -1,0 +1,19 @@
+ \begin{figure}[H]
+        \centering
+        \caption{Example of a Data model of a key-value store}
+        \begin{tikzpicture}
+        \tikzset{
+            block/.style = {draw, text width=6em, minimum height=0.7cm, rounded corners, outer sep=0pt, anchor=center, align=center},
+            register/.style = {draw, text width=6em, minimum height=4ex, inner xsep=5pt, outer sep=0pt, anchor=center,align=center}, 
+            map/.style={matrix of nodes, nodes=register, row sep=-\pgflinewidth, column sep=0.3cm, row 1/.style={nodes=block}},
+        }
+        \matrix[map] (A) {
+            Key & Key & Key \\[1.5cm]
+         Int & String & List\\
+        };
+          \foreach \i in {1,2,3}
+                \draw[->] (A-1-\i) -- (A-2-\i);
+        \end{tikzpicture}
+                \label{fig:KV1}
+
+    \end{figure}

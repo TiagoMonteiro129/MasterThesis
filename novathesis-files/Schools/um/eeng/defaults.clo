@@ -1,0 +1,363 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% defaults.clo
+%% NOVA thesis configuration file
+%%
+%% Costumization for UM-ENG (strings and cover)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{upquote}
+% University
+\university[pt]={Universidade do Minho}
+\university[en]={Universidade do Minho}
+
+% Faculty / School
+\faculty[pt]={Escola de Engenharia}
+\faculty[en]={Escola de Engenharia}
+
+% Scientific field
+\mynewdata{phdmajorfield}
+\phdmajorfield[pt]={Informática}
+\phdmajorfield[en]={Computer Science}
+\majorfield[pt]={Engenharia Informática}
+\majorfield[en]={Informatics Engineering}
+
+% Department
+\department[pt]={Departamento de Informática}
+\department[en]={Department of Informatics}
+
+% Comiittee printing order
+\committeeorder[all]={c,r,a,m}%
+
+% Cover background images
+\thesiscover[phd,front]={}
+\thesiscover[phdplan,front]={}
+\thesiscover[phdprop,front]={}
+\thesiscover[msc,front]={}
+\thesiscover[mscplan,front]={}
+\thesiscover[bsc,front]={}
+\thesiscover[plain,front]={}
+
+% Set margins for "normal" pages
+\margin[screen,top]={2.5cm}
+\margin[screen,bottom]={2.5cm}
+\margin[screen,left]={2.5cm}
+\margin[screen,right]={2.5cm}
+\margin[paper,top]={2.5cm}
+\margin[paper,bottom]={2.5cm}
+\margin[paper,left]={2.5cm}
+\margin[paper,right]={2.5cm}
+
+% Set margins for "normal" pages
+\margin[screen,top]={2.5cm}
+\margin[screen,bottom]={2.5cm}
+\margin[screen,left]={2.5cm}
+\margin[screen,right]={2.5cm}
+\margin[paper,top]={2.5cm}
+\margin[paper,bottom]={2.5cm}
+\margin[paper,left]={2.5cm}
+\margin[paper,right]={2.5cm}
+
+% Set margins for cover pages
+\margin[phd,top]={0cm}
+\margin[phd,bottom]={1cm}
+\margin[phd,left]={18.5em}
+\margin[phd,right]={0cm}
+\margin[phdplan,top]={0cm}
+\margin[phdplan,bottom]={1cm}
+\margin[phdplan,left]={18.5em}
+\margin[phdplan,right]={0cm}
+\margin[phdprop,top]={0cm}
+\margin[phdprop,bottom]={1cm}
+\margin[phdprop,left]={18.5em}
+\margin[phdprop,right]={0cm}
+\margin[msc,top]={0cm}
+\margin[msc,bottom]={1cm}
+\margin[msc,left]={18.5em}
+\margin[msc,right]={0cm}
+\margin[mscplan,top]={0cm}
+\margin[mscplan,bottom]={1cm}
+\margin[mscplan,left]={18.5em}
+\margin[mscplan,right]={0cm}
+\margin[bsc,top]={0cm}
+\margin[bsc,bottom]={1cm}
+\margin[bsc,left]={18.5em}
+\margin[bsc,right]={0cm}
+\margin[plain,top]={2.5cm}
+\margin[plain,bottom]={2.5cm}
+\margin[plain,left]={2.5cm}
+\margin[plain,right]={2.5cm}
+%
+
+
+
+\degreestr[bsc,m,en]={Bachelor}
+\degreestr[bsc,f,en]={Bachelor}
+\degreestr[msc,m,en]={Master of Engineering}
+\degreestr[msc,f,en]={Master of Engineering}
+\degreestr[mscplan,m,en]={Master of Engineering}
+\degreestr[mscplan,f,en]={Master of Engineering}
+\degreestr[phd,m,en]={Doctor of Philosophy}
+\degreestr[phd,f,en]={Doctor of Philosophy}
+\degreestr[phdplan,m,en]={Doctor of Philosophy}
+\degreestr[phdplan,f,en]={Doctor of Philosophy}
+\degreestr[phdprop,m,en]={Doctor of Philosophy}
+\degreestr[phdprop,f,en]={Doctor of Philosophy}
+
+\docdegreestr[bsc,en]={Bachelor's Report}
+\docdegreestr[msc,en]={Master's Dissertation}
+\docdegreestr[mscplan,en]={Master's Pre-Dissertation Report}
+\docdegreestr[phdplan,en]={Doctoral Thesis Qualification}
+\docdegreestr[phdprop,en]={Doctoral Thesis Dissertation Planning}
+\docdegreestr[phd,en]={Doctoral Thesis}
+
+%\docdegreestr[bsc,pt]={Projeto de Licenciatura}
+\docdegreestr[mscplan,pt]={Relatório Preliminar de Dissertação de Mestrado}
+\docdegreestr[msc,pt]={Dissertação de Mestrado}
+\docdegreestr[phdplan,pt]={Plano de Tese de Doutoramento}
+\docdegreestr[phdprop,pt]={Proposta de Tese de Doutoramento}
+\docdegreestr[phd,pt]={Tese de Doutoramento}
+
+
+%\dissertationstr[bsc,pt]={Relatório para obtenção do Grau de %
+%\thedegreestr[\novathesis@opt@docdegree,\theauthorgender,\novathesis@opt@coverlang]\ em\\[1ex] \textbf{\fontsize{12}{12}\selectfont\themajorfield[\novathesis@opt@coverlang]}}
+
+
+\dissertationstr[mscplan,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[mscplan,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master's  in \themajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[msc,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Mestrado em \themajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[msc,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\* Master's  in  \themajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[phdplan,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phdprop,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phd,pt]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doutoramento em \thephdmajorfield[\novathesis@opt@coverlang]}
+
+
+\dissertationstr[phdplan,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phdprop,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
+
+\dissertationstr[phd,en]={%
+\thedocdegreestr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\ \\*
+Doctorate in \thephdmajorfield[\novathesis@opt@coverlang]}
+
+
+
+\mynewdata{copyrightlabel}
+
+\copyrightlabel[pt]={Licença concedida aos utilizadores deste trabalho}
+\copyrightlabel[en]={License granted to the users of this work}
+
+\newcommand{\licenseThis}{%
+\normalsize{\textit{\textbf{\thecopyrightlabel[\novathesis@opt@coverlang]}}}\\
+
+\doclicenseImage\\[0.5mm]%
+\normalsize\textbf{\doclicenseLongName}\\[0.5mm]
+\normalsize\textbf{\doclicenseName}\\[2ex]
+\small\url{\doclicenseURL}
+}
+
+\copyrighttextstr[pt]={\begin{center}{\textbf{DIREITOS DE AUTOR E CONDIÇÕES DE UTILIZAÇÃO DO TRABALHO POR TERCEIROS}}\end{center} \hspace{\parindent} Este é um trabalho académico que pode ser utilizado por terceiros desde que respeitadas as regras e boas práticas internacionalmente aceites, no que concerne aos direitos de autor e direitos conexos.\\[1ex] \rule{\parindent}{0pt} Assim, o presente trabalho pode ser utilizado nos termos previstos na licença abaixo
+indicada.\\[1ex]\rule{\parindent}{0pt} Caso o utilizador necessite de permissão para poder fazer um uso do trabalho em condições não previstas no licenciamento indicado, deverá contactar o autor, através do RepositoriUM da \theuniversity[\novathesis@opt@coverlang].\\[1cm]\licenseThis}
+
+
+\copyrighttextstr[en]={\noindent\begin{center}{\textbf{COPYRIGHT AND TERMS OF USE OF THIS WORK BY A THIRD PARTY}}\end{center} \hspace{\parindent} This is academic work that can be used by third parties as long as internationally accepted rules and good practices regarding copyright and related rights are respected. \\[1ex] \rule{\parindent}{0pt} Accordingly, this work may be used under the license provided below.\\[1ex] \rule{\parindent}{0pt} If the user needs permission to make use of the work under conditions not provided for in the indicated licensing, they should contact the author through the RepositoriUM of \theuniversity[\novathesis@opt@coverlang].\\[1cm]\licenseThis}
+
+
+\mynewdata{statementofintegritytextstr}
+
+
+\statementofintegritytextstr[pt]={\begin{center}{\textbf{DECLARAÇÃO DE INTEGRIDADE}}\end{center} \hspace{\parindent} Declaro ter atuado com integridade na elaboração do presente trabalho académico e confirmo que não recorri à prática de plágio nem a qualquer forma de utilização indevida ou falsificação de informações ou resultados em nenhuma das etapas conducente à sua elaboração.\\[1ex] \rule{\parindent}{0pt} Mais declaro que conheço e que respeitei o Código de Conduta Ética da \theuniversity[\novathesis@opt@coverlang].}
+
+
+\statementofintegritytextstr[en]={\begin{center}{\textbf{STATEMENT OF INTEGRITY}}\end{center} \hspace{\parindent} I hereby declare having conducted this academic work with integrity. I confirm that I have not used plagiarism or any form of undue use of information or falsification of results along the process leading to its elaboration.\\[1ex] \rule{\parindent}{0pt} I further declare that I have fully acknowledged the Code of Ethical Conduct of the \theuniversity[\novathesis@opt@coverlang].}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IST guidelines:
+% The pages should be numbered consecutively at the bottom centre of the
+% page.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makepagestyle{novathesis@myvf}
+\makeoddfoot{novathesis@myvf}{}{\thepage}{}
+\makeevenfoot{novathesis@myvf}{}{\thepage}{}
+\makeheadrule{novathesis@myvf}{\textwidth}{\normalrulethickness}
+\makeevenhead{novathesis@myvf}{\small\textsc{\leftmark}}{}{}
+\makeoddhead{novathesis@myvf}{}{}{\small\textsc{\rightmark}}
+\pagestyle{novathesis@myvf}
+%
+\frenchspacing
+
+% Fazer indentação parágrafos
+\setlength{\parindent}{17pt}
+
+% Corrigir distância entre número de secção (e.g. ``3.10'' e título da mesma)
+% Para ver info no manual, procurar por cftKnumwidth em que K é o tipo da entrada (capítulo, section, ...)
+% \setlength{\cftsectionnumwidth}{1.2\cftsectionnumwidth}
+% \setlength{\cftfigurenumwidth}{1.2\cftfigurenumwidth}
+% \setlength{\cftlistingnumwidth}{1.2\cftlistingnumwidth}
+% \setlength{\cftchapternumwidth}{1.2\cftchapternumwidth}
+
+% Corrigir espaço para páginas com numeração romana na ToC
+\renewcommand{\@pnumwidth}{2em}
+
+% Espaçamento entre entradas na ToC
+% \setlength{\cftbeforesectionskip}{2mm}
+% \setlength{\cftbeforesubsectionskip}{2mm}
+% \setlength{\cftbeforefigureskip}{2mm}
+% \setlength{\cftbeforelistingskip}{2mm}
+% \setlength{\cftbeforetableskip}{2mm}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % String re-definition; original definitions in string-X.clo
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ % Use array helper defined in novathesis.csl
+ \mynewdata{adviserslabel}
+
+
+ \adviserslabel[pt]={Trabalho efetuado sob a orientação do(a)}
+ \adviserslabel[en]={Work supervised by}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Draw the cover page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\definecolor{grey}{rgb}{0.6,0.6,0.6}
+\definecolor{eng}{cmyk}{0.14,0.71,1,0.03}
+\definecolor{um}{cmyk}{0.25,1.00,1.00,0.22}
+\definecolor{lightGray}{gray}{0.92}
+\definecolor{verylightgray}{cmyk}{0,0,0,0.05}
+
+\gdef\umc{um}
+\gdef\schoolc{eng}
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+% UM_ENg Logo
+\def\UMUOEI[#1]#2{\begin{tikzpicture}[
+	% bars styling,
+	bar/.style={rectangle,fill=white,rounded corners=0.08cm,minimum width=0.16cm,inner sep=0pt},
+	umBig/.style={minimum height=0.74cm},
+	umSmall/.style={minimum height=0.48cm},
+	engBar/.style={minimum height=0.86cm},
+	umLogoPosition/.style={xshift=1.3cm,yshift=1.3cm},
+	engLogoPosition/.style={xshift=3.9cm,yshift=1.3cm}]
+
+	% Uminho logo
+	\fill[fill=#1] (0,0) -- (2.6,0) -- (2.6,2.6) -- (0,2.6) -- cycle;
+	\foreach \i in {1,...,3}{
+		\node at (\i*120+30:0.45)[bar,umBig,umLogoPosition,rotate=\i*120-60]{};
+		\node at (\i*120+90:0.60)[bar,umSmall,umLogoPosition,rotate=\i*120]{};
+	}
+	% EngUminho logo
+	\fill[fill=#2] (2.6,0) -- (5.2,0) -- (5.2,2.6) -- (2.6,2.6) -- cycle;
+	\foreach \i in {1,...,5}
+		\node at (\i*72-90:0.74)[bar,engBar,engLogoPosition,rotate=\i*72-90]{};
+\end{tikzpicture}}
+\def\optionaladvisers#1{\ifnum\hide=1\relax\else{#1}\fi}
+
+
+% LOGO
+\coveritem[l]{0cm}{%
+\UMUOEI[\umc]{\schoolc}
+}
+
+% University and School
+\coveritem[l]{0.7cm}{%
+  \fontsize{14.8}{13.5}\selectfont%
+  \textbf{\theuniversity[\novathesis@opt@coverlang]}\\%
+  \fontsize{14.8}{13.5}\selectfont%
+  \newsgottl{\thefaculty[\novathesis@opt@coverlang]}\\%
+}
+
+
+
+% Author name and Title of Dissertation
+\coveritem[l]{10.5em}{%
+  \linespread{1.0}
+  \fontsize{17pt}{20.4pt}\selectfont{%
+  \theauthorname\\[2.7ex]%
+  %\fontsize{17pt}{20.4pt}\selectfont%
+  \textbf{\covertitle}}%
+}
+
+
+% Advisers
+\coveritem[l]{2}{%
+\optionaladvisers{
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \thedissertationstr[\novathesis@opt@docdegree,\novathesis@opt@coverlang]\\[6mm]%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \theadviserslabel[\novathesis@opt@coverlang]\\%
+  \fontsize{14pt}{16.8pt}\selectfont%
+  \textbf{\printadvisersaslist}%
+\\\rule{0pt}{6mm}
+    }
+}
+
+
+
+% Committee — only print the committee for the main classes
+\coveritem[c]{1}{%
+  \ifthenelse{%
+    \equal{\novathesis@opt@docdegree}{bsc}%
+    \OR\equal{\novathesis@opt@docdegree}{msc}%
+    \OR\equal{\novathesis@opt@docdegree}{phd}}%
+  {
+  \committeetitlestrfont[\novathesis@opt@coverlang]={\fontsize{14}{14}\selectfont\bfseries}%
+  \commiteememberstrfont[\novathesis@opt@coverlang]={\bfseries}%
+  \fontsize{11}{11}\selectfont\printcommittee%
+  }%
+  {}%
+}
+
+
+% Date
+\coveritem[l]{1}{%
+  \fontsize{10}{10}\selectfont%
+  \ifdraftdoc%
+  DRAFT: \today%
+  \else%
+  \thedatemonth, \thedateyear%
+  \fi%
+}
+\mynewdata{signatureline}
+\signatureline[en]={\makebox[0.1\textwidth]{\hrulefill},
+\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
+(Location)} \makebox[0.4\textwidth]{\footnotesize (Date)}
+\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
+
+\signatureline[pt]={\makebox[0.1\textwidth]{\hrulefill},
+\makebox[0.4\textwidth]{\hrulefill}\\*[0.1mm]\makebox[0.1\textwidth]{\footnotesize
+(Localização)} \makebox[0.4\textwidth]{\footnotesize (Data)}
+\\[1cm]\begin{center}\makebox[0.7\textwidth]{\hrulefill}\\[1ex](\theauthorname)\end{center}}
+

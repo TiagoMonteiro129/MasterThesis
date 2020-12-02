@@ -1,0 +1,43 @@
+This section shows the tools we use to benchmark the databases in a real environment, which databases we choose to use, and why, and which energy measurement tools we use to collect CPU, primary and secondary storage energy, and the overall system design we use.
+
+\subsection{Benchmark Tools}
+
+\input{Design/benchmark}
+
+\subsection{Database Under Test}
+
+\input{Design/database}
+
+\subsection{Energy Measurement Tools}
+if we want to analyze energy consumption, We must be able to obtain energy readings. For that, we will need two tools, one for CPU and DRAM, and secondary memory.
+
+\subsubsection{\textbf{CPU and Primary storage}}
+
+\input{Design/rapl}
+    
+\subsubsection{\textbf{Secondary Storage}}
+
+\input{Design/arduino}
+
+
+\subsection{Overall Design}
+
+To get precise and correct measurements, at the start of every benchmark that Hammerdb does to any Database, the Arduino and RAPL start in different and synchronized threads and start their executions simultaneously and only ending when Hammerdb it is over, as we can see in figure \ref{fig:arch}.
+
+\begin{figure}[H]
+  \centering
+    \caption{Architecture Design}
+  \includegraphics[width=\linewidth]{imagens/arquitetura.png}
+  \label{fig:arch}
+\end{figure}
+
+
+To do the sync actions, we had to create a program that would start the Arduino and RAPL as differents threads, that only start at the beginning of HammerDB execution, and the end gathers the data obtain from the measurements tools and write in a CSV file.
+
+
+
+
+
+
+
+
