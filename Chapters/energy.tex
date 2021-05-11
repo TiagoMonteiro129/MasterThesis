@@ -6,7 +6,7 @@ This Section presents the definition of energy, what are the relevant hardware c
 \subsection{Types of Energy Consumption} \label{energypower} 
 In order to understand how energy consumption can be measured, we must first understand what power is, what energy is and how different it is.
 
-The scientific definition of Power is the total workload or energy transferred divided by the time interval. In this context, power is the amount of energy consumed per unit of time. According to The international system of units~\cite{taylor_1991}, the universal unit used for power is Watts (W) or Joules/s. Energy is the total workload of a system during a period of time and is the unit used for Energy is Joules (J).
+The scientific definition of Power is the total workload or energy transferred divided by the time interval. In this context, power is the amount of energy consumed per unit of time. According to The international system of units~\cite{taylor_1991}, the universal unit used for power is Watts or Joules/s. Energy is the total workload of a system during a period of time and is the unit used for Energy is Joules.
 
 The Power can be calculated in two ways, the first is when we know the total energy and the time interval,
 
@@ -14,7 +14,7 @@ The Power can be calculated in two ways, the first is when we know the total ene
 P = \frac{E}{\Delta t} 
 \end{equation}
 
-The other possible way of calculating is through Voltage and current intensity. Voltage is defined to be the potential energy of two different points and the Unit is Volts and Current intensity is the magnitude of an electric current as measured by the quantity of electricity crossing a specified area of equipotential surface per unit time and unit of measurement is Amperes (A). 
+The other possible way of calculating is through Voltage and current intensity. Voltage is defined to be the potential energy of two different points and the Unit is Volt and Current intensity is the magnitude of an electric current as measured by the quantity of electricity crossing a specified area of equipotential surface per unit time and unit of measurement is Amperes. 
 
 With this we can calculate the power by this formula:
 
@@ -35,7 +35,7 @@ E = V I \Delta t
 To measure the energy consumption of total and individual components, we have to distinguish different types of consumption.  These types of energy consumption are:
 
 \begin{itemize}
-    \item \textbf{Idle Consumption:} is the base consumption needed to ensure that the system is ready, and able to respond to any user need quickly and effectively. This energy is consumed by the system regardless of the state of operation. This includes energy consumed inactive by the disks, network interfaces, \gls{cpu}, caches, memory, motherboard, etc. This category also includes the energy needed to maintain the basic requirements of the operating system and other tasks in progress~\cite{portela2016}.
+    \item \textbf{Idle Consumption:} is the base consumption needed to ensure that the system is ready, and able to respond to any user need quickly and effectively. This energy is consumed by the system regardless of the state of operation. This includes energy consumed inactive by the disks, network interfaces, \gls{cpu}, caches, memory, motherboard, etc. This category also includes the energy needed to maintain the basic requirements of the \gls{os} and other tasks in progress~\cite{portela2016}.
     
    \item \textbf{Dynamic Consumption:} This refers to the basic consumption necessary for an operation requested by the user of the system. Dynamic Energy includes the energy consumed by the \gls{cpu}, the extraordinary operations on the \gls{dram}, the disk when searching, reading or/and writing data, the network interface when receiving and transmitting data packets, and other needs to respond to user requests when executing instructions. Dynamic power consumption values mainly depend on the type of workload that runs on the machine. ~\cite{portela2016}.
   \end{itemize}
@@ -57,9 +57,9 @@ The methods available to measures these types of consumptions are \cite{ardito20
 \label{relevant}
 It is important to distinguish which hardware components are relevant to global consumption before deciding on a method for measuring energy consumption because it is easy to understand and compare the behavior of the general system with the energy consumption of the subsystem. While global consumption can also be constant and unchanging, that doesn't mean that there is a steady consumption of energy in all subsystems.
 
-According to several studies carried out during the last 15 years, it shows that the main subsystems that generate dynamic energy consumption are the CPU, the Memory, and Disk~\cite{portela2016}. According to google research \cite{google} provided some insight into how energy is used in modern IT equipment at the time and got by breaking down the peak power usage of one generation of WSCs deployed at Google in 2007 categorized by main component group, they got that using modern data center using late 2012 generation servers the 3 main hardware components besides cooling components on energy total consumption was \gls{cpu} with 42\%, Disks with 14,3\% and \gls{dram} with 12,3\%. Also, \citeauthor{kensal} mentions in an article that the subsystems with more impact on the dynamic consumption are CPU, memory, and disk, represent, respectively, 58\%, 28\%, and 14\% .
+According to several studies carried out during the last 15 years, it shows that the main subsystems that generate dynamic energy consumption are the \gls{cpu}, the Memory, and Disk~\cite{portela2016}. According to google research \cite{google} provided some insight into how energy is used in modern \gls{it} equipment at the time and got by breaking down the peak power usage of one generation of WSCs deployed at Google in 2007 categorized by main component group, they got that using modern data center using late 2012 generation servers the 3 main hardware components besides cooling components on energy total consumption was \gls{cpu} with 42\%, Disks with 14,3\% and \gls{dram} with 12,3\%. Also, \citeauthor{kensal} mentions in an article that the subsystems with more impact on the dynamic consumption are \gls{cpu}, memory, and disk, represent, respectively, 58\%, 28\%, and 14\% .
 
-With this information, we can conclude that our energy measurements must be around this 3 components and it also facilitates the study of the causes of energy variations in the DBMS. 
+With this information, we can conclude that our energy measurements must be around this 3 components and it also facilitates the study of the causes of energy variations in the \gls{dbms}. 
 %Google, L. A. Barroso e U. Hölzle, The Datacenter as a Computer: AnIntroduction to the Design of Warehouse-Scale Machines, vol. 6,Morgan & Claypool Publishers, 2009. 
 
 

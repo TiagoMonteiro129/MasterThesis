@@ -8,11 +8,11 @@ Here it will show why Arduino was chosen to measure energy consumption on disk s
 In this case, for measured disk consumption we opt for an instant power measurement approach made by \citeauthor{portela2016} instead of a Model Estimation. An Instant power measurement approach is a reliable choice because it is one of the simple solutions to achieve the objectives intended, and it is low-cost. Here we want to ensure that our results are precise and reliable, and since our measurements are on a small scale, it doesn't have an impact on the overall system. This solution provides what is needed without significant drawbacks ~\cite{portela2016}.
 
 
-Since it is necessary for data storage and handling of energy consumption, a mere ammeter won't do the work here. Thus to gather the measurements it was chosen an Arduino Uno with a current sensory. Figure \ref{fig:satacable} presents the scheme of an Arduino UNO with a current sensory connected to a SATA cable. The SATA cable is responsible for distributing energy to the disk and data exchange between the secondary storage and the computer.  So to get the energy consumption on the disk, the current sensor must be connected to the SATA cable that is responsible for distributing energy ~\cite{portela2016}.
+Since it is necessary for data storage and handling of energy consumption, a mere ammeter won't do the work here. Thus to gather the measurements it was chosen an Arduino Uno with a current sensory. Figure \ref{fig:satacable} presents the scheme of an Arduino UNO with a current sensory connected to a \gls{sata} cable. The \gls{sata} cable is responsible for distributing energy to the disk and data exchange between the secondary storage and the computer.  So to get the energy consumption on the disk, the current sensor must be connected to the \gls{sata} cable that is responsible for distributing energy ~\cite{portela2016}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\columnwidth]{Chapters/images/arduino.png}  \caption{Scheme of connections between SATA cable, current sensor and Arduino used to measurement secondary storage.}
+  \includegraphics[width=0.8\columnwidth]{Chapters/images/arduino.png}  \caption{Scheme of connections between \gls{sata} cable, current sensor and Arduino used to measurement secondary storage.}
   \label{fig:satacable}
 \end{figure}
 

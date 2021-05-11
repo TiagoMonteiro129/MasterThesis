@@ -164,6 +164,19 @@
 \usetikzlibrary{matrix,positioning}
 \usepackage{multirow}
 
+\DeclareCiteCommand{\citeauthor}
+  {\boolfalse{citetracker}%
+   \boolfalse{pagetracker}%
+   \usebibmacro{prenote}}
+  {\ifciteindex
+     {\indexnames{labelname}}
+     {}%
+   \printtext[bibhyperref]{\printnames{labelname}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+  
+
+
 %------------------------------------------------------------------
 % Costumization of some packages
 %------------------------------------------------------------------
@@ -297,7 +310,7 @@
 % sintax: \appendixfile{file}
 % Comment if not needed
 \appendixfile{appendix1}
-%\appendixfile{appendix2}
+\appendixfile{appendix2}
 %\annexfile{annex1}
 
 

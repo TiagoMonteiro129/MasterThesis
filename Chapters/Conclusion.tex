@@ -2,61 +2,74 @@
 \label{cha:conclusion}
 
 	
-	This project fits in the area of green software, this area is an important topic in today's world. Which over the years, energy-efficient of large-scale computing has become more relevant with the high growth in the volume of data processed through Cloud services. Since DBMS can work as a cloud service it is important to understand and study their consumption.
+	This thesis fits in the green software area, which is a crucial topic in today's world which over the years, energy-efficient of large-scale computing has become more relevant with the high growth in the volume of data processed through cloud services. Since \gls{dbms} can work as a cloud service, it is essential to understand and study their consumption.
 	
-	This dissertation ends with this chapter, which focuses on the main conclusions that can be taken from the benchmark of DBMS.	Will all things said, this chapter is divided into two sections. The first section makes a summary of the study carried out and a brief answer to the research questions. The second section makes some suggestions about research that can be made in the future on this topic.
+	This dissertation ends with this chapter, which focuses on the main conclusions taken from the results benchmark of \gls{dbms}.	All things said we divided this chapter into two sections. First, Section 1 starts with a summary of the study carried out during this thesis and a brief answer to the research questions formulated in Chapter 3. Finally, Section 2 makes some ideas about research for the future on this topic and some limitations in this work.
 	
 
 \section{Final Considerations}
 \label{sc:finalcons}
 %Resumir dos objetivos
-In a brief summary, this master thesis's main goal was to compare different DBMS software in a real environment scenario.
+In summary, the main aim of this master's thesis was to compare various \gls{dbms} applications in the most practical environment scenario possible.
 
 %Motivação por traz disto
-The impulse that drove this project was the concern about energy awareness in developing software. In addition to the lack of knowledge in DBMS energy consumption. One of the motives for choosing DBMS and not other software was the current studies and practices on databases emphasizing performance more than energy efficiency. Also, conducting a study in this area provides solutions for improving energy consumption in a data center when dealing with DBMS.
+The impulse that drove this project was the concern about energy awareness in developing software and the lack of knowledge in \gls{dbms} energy consumption. One of the motives to choosing \gls{dbms} and not other software was the current studies and practices on databases emphasizing performance more than energy efficiency. Also, this area presents solutions for improving energy consumption in a data center when dealing with \gls{dbms}.
 %O Que se fez
 
 %Responder as RQ
-For a summary view of this study's results, Table \ref{tb:conclusion}  presents a classification for each SDGB in each scenario.
 
-
+Table \ref{tb:conclusion} is a summary view of the results obtained in this thesis. There we present the results into a classification table of each SDGB in each scenario.
 \input{Chapters/table/conclusion}
 
 After analyzing these results, it is possible to answer the three research questions presented in section \ref{sc:rq}: 
-    \paragraph{RQ1:} Which Database Management Systems is the most energy-efficient?
 
-    Even though in section 4 only the 5 minutes were analyzed and discussed the results were similar in 10 minutes tests. Here the conclusion is that with only one virtual user Redis is the most energy-efficient on a general note by far, and when only talking about Relational DBMS Postgres was the best follow by MariaDB then MySQL. On a more specific level like Package/CPU due to its non-relational nature Redis is the less energy-efficient, while it is, due to the same reason, the most efficient on the Disk level.
+
+
+\begin{itemize}
+  \item \textbf{RQ1}:\textit{Which \acrlong{dbms} is the most energy-efficient?}
+	Here the conclusion is that with only one virtual user, Redis is the most energy-efficient on a general note by far. If we only compare Relational \gls{dbms}, the best is Postgres, follow by MariaDB then MySQL. On a more specific level like Package/\gls{cpu}, due to its non-relational nature, Redis is less energy-efficient, while it is, due to the same reason, the most efficient on the Disk level.
     
-     \paragraph{RQ2:} Which Database Management Systems has the best energy spent per performance?
 
-Here is a bit different since this question is about which database has the best performance per energy consumption. Here it has 2 observations, the first one of TPM and the more reliable NOPM.
+ \item \textbf{RQ2}:\textit{Which \acrlong{dbms} has the best energy versus runtime tradeoff?}
+Here is a bit different since this question is about which database has the best performance per energy consumption. Here it has two observations, the first one of \gls{tpm} and the more reliable \gls{nopm}.
+On energy consumption per \gls{tpm}, Redis is the most efficient in all subcomponents followed by Postgres, MariaDB, and the worst MySQL.
+Here at all levels, Postgres is the one with the lowest energy consumption, followed by Redis, MariaDB, and MySQL.
 
-On energy consumption per TPM, Redis is by far the better in all levels follow by Postgres, MariaDB, and the worst MySQL.
-
-On energy consumption per NOPM, it is a different story as it does not follow the same pattern.  Here at all levels, Postgres is the one with the least energy consumption per performance, Redis here only has a good energy consumption on a general note and disk-level, and MariaDB followed by MySQL.
-
-     \paragraph{RQ3:} Which Database Management Systems are the most energy-efficient with a different number of users?
-
-In this final RQ3, there are two topics to be covered. 
-The first is what DBMS has better scalability in terms of energy consumption, MariaDB is by far the worst energy-efficient DBMS with an increase of users, Postgres maintains similar energy consumption, and MySQL same as Redis improves its energy efficiency.
-
-The other topic is energy consumption per performance scalability, both energy consumption per TPM and energy consumption per NOPM has similar results where Redis is the one who improves most, followed by MariaDB, Postgres, and MySQL.
-
-
-
-
-
-
+ 
+%\discuss{Não será esta a pergunta? \textit{Which Database Management Systems has the best energy versus runtime tradeoff?} Parece-me Bem}
+ 
+  \item \textbf{RQ3}:\textit{How does the increasing number of users of the \acrlong{dbms} impact their energy consumption? } In this final Research Question, there are two topics to be covered:
+The first is what \gls{dbms} has better scalability in terms of energy consumption, where MariaDB is by far the worst energy-efficient \gls{dbms} with an increase of users, Postgres maintains similar energy consumption, MySQL and Redis improve their energy efficiency.
+The other topic is energy consumption per performance scalability in both energy consumption per \gls{tpm} and energy consumption per \gls{nopm}, which has similar results, which Redis is who improves most, followed by MariaDB, Postgres, and MySQL.
+\end{itemize}
 
 
 \section{Future Work}
 
+The presented study in this master thesis, as initially proposed, reduces some of the lack of knowledge about energy efficiency in \gls{dbms}.  Even though this study furthered the advancement of Energyware Engineering in \gls{dbms}, there is still work left to do.  
 
-The presented study in this master thesis, as initially proposed, reduces some of the lack of knowledge about energy efficiency in DBMS.  Even though this study furthered the advancement of Energyware Engineering in DBMS, there is still work left to do.  
+In terms of work that could boost this study would be doing the same benchmark with longer times. Even though we did tests for 5, 10, and 30 minutes, the objective would be doing it for an even longer time, for example, 24 hours. Additionally, extend this study to all \gls{dbms} available on HammerDB but different types of \gls{dbms} not available in HammerDB.
 
-In terms of work that could improve this study would be doing same benchmark with longer times. Even though we were able to do benchmarks for 5 minutes, 10 and 30 minutes, the objective would be doing for an even longer time, for example, 24 hours. Additionally, we only study a small group of DBMS, and it would be interesting not only to extend this study to all the DBMS available in HammerDB but also to extend it to different types of DBMS.
+Another path to this study would be to do this study with different hardware and compare the results. Examples of this would be to use a different size of \gls{ram}, \acrshort{ssd}, or a \gls{cpu}.
 
-Another approach to this study would be to do this study with different hardware and compare the results. Examples of this would be to use a different size of RAM, SSD, or a processor from a different manufacturer.
+Since the benchmark applied here is a standard benchmark, it would be interesting to explore the \gls{dbms} energy consumption administered to different benchmark software and workloads. With this, it would bring a vision of \gls{dbms} energy consumption applied to distinct environments. The last suggestion would be doing a benchmark but applying energy-aware query optimization in this benchmark as a custom script and with this understand the effect of this optimization on an energy-efficiency and performance.
 
-Since the benchmark applied here is a standard benchmark, it would be very interesting to explore the DBMS energy consumption applied to different benchmark software and workloads. With this, it would bring a vision of DBMS energy consumption applied to distinct environments. For the last suggestion, it would be doing a benchmark but applying energy-aware query optimization in this benchmark as a custom script and with this understand the effect of this optimization on a energy-efficency and performance.
+\begin{comment}\paragraph{RQ1:} \textit{Which \acrlong{dbms} is the most energy-efficient?}
 
+	Here the conclusion is that with only one virtual user, Redis is the most energy-efficient on a general note by far. If we only compare Relational \gls{dbms}, the best is Postgres, follow by MariaDB then MySQL. On a more specific level like Package/\gls{cpu}, due to its non-relational nature, Redis is less energy-efficient, while it is, due to the same reason, the most efficient on the Disk level.
+    
+     \paragraph{RQ2:}\textit{Which \acrlong{dbms} has the best energy versus runtime tradeoff?}
+
+Here is a bit different since this question is about which database has the best performance per energy consumption. Here it has two observations, the first one of \gls{tpm} and the more reliable \gls{nopm}.
+
+On energy consumption per \gls{tpm}, Redis is the most efficient in all subcomponents followed by Postgres, MariaDB, and the worst MySQL.
+
+Here at all levels, Postgres is the one with the lowest energy consumption, followed by Redis, MariaDB, and MySQL.
+
+     \paragraph{RQ3:} Which Database Management Systems are the most energy-efficient with a different number of users?
+
+In this final RQ3, there are two topics to be covered. 
+The first is what \gls{dbms} has better scalability in terms of energy consumption, where MariaDB is by far the worst energy-efficient \gls{dbms} with an increase of users, Postgres maintains similar energy consumption, MySQL and Redis improve their energy efficiency.
+
+The other topic is energy consumption per performance scalability in both energy consumption per \gls{tpm} and energy consumption per \gls{nopm}, which has similar results, which Redis is who improves most, followed by MariaDB, Postgres, and MySQL.
+\end{comment}

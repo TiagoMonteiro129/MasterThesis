@@ -5,68 +5,68 @@
 \chapter{Introduction}
 \label{cha:introduction}
 
-This chapter introduces the theme and objectives of this Master's thesis. First, Section \ref{sc:context} provides background on energy consumption, including why it is an issue in the IT area and how it is a stimulus for this study.
+This chapter introduces the theme and objectives of this Master's thesis. First, Section \ref{sc:context} provides background on energy consumption, including why it is an issue in the \gls{it} area and how it is a stimulus for this study.
 Afterwards in Section \ref{sc:rq}, the research questions of this thesis are presented along with an explanation of their reasoning. Finally, in Section \ref{sc:structure}, the remainder document structure is presented.
 
 \section{Context and Motivation}
 \label{sc:context}
 There has been an increase in the number of users with internet access over the past decades. In 2018, more than half of the world's population is already using the internet daily, and almost 60 percent of the world's homes have access to the internet~\cite{2018stat}.
-With the unprecedented increase in users, the IT sector is eagerly more concerned with energy management in hardware and software development. 
-These environmental issues caused by energy consumption are already evident. Whatever it urges the governments to track the IT capacity of companies around the world\cite{gesi2008enabling,whitehead2014assessing,bilal2014trends,greenframework,dayarathna2015data}.
+With the unprecedented increase in users, the \gls{it} sector is eagerly more concerned with energy management in hardware and software development. 
+These environmental issues caused by energy consumption are already evident. Whatever it urges the governments to track the \gls{it} capacity of companies around the world~\cite{gesi2008enabling,whitehead2014assessing,bilal2014trends,greenframework,dayarathna2015data}.
 
-According to Coal \citeauthor{CCOAL18}, the energy consumption of the worldwide IT sector is approximately 1,500 TWh, corresponding to roughly 10 percent of the worldwide energy produced. The indicated values are equivalent to the global energy consumed by Japan and Germany together. Although there are policies to reduce data center energy consumption, the proportion of electricity cost still increases year by year in today's large-scale data center~\cite{trends}.
+According to Coal \citeauthor{CCOAL18}, the energy consumption of the worldwide \gls{it} sector is approximately 1,500 \acrshort{twh}, corresponding to roughly 10 percent of the worldwide energy produced. The indicated values are equivalent to the global energy consumed by Japan and Germany together. Although there are policies to reduce data center energy consumption, the proportion of electricity cost still increases year by year in today's large-scale data center~\cite{trends}.
 
 %here
-Due to this increase, data centers are becoming a vital part of IT operations that offer computing facilities to large, medium, and small organizations, such as online social networks, cloud computing providers, online companies, banks, hospitals, and universities. With the rise of cloud computing, hosting services in data centers has become a multi-billion-dollar sector that plays a pivotal role in the IT industry~\cite{dayarathna2015data,RONG2016674}.  Because of the environmental and economic implications of cloud services, new software and hardware energy efficiency challenges for data centers have emerged~\cite{dayarathna2015data}. 
+Due to this increase, data centers are becoming a vital part of \gls{it} operations that offer computing facilities to large, medium, and small organizations, such as online social networks, cloud computing providers, online companies, banks, hospitals, and universities. With the rise of cloud computing, hosting services in data centers has become a multi-billion-dollar sector that plays a pivotal role in the \gls{it} industry~\cite{dayarathna2015data,RONG2016674}.  Because of the environmental and economic implications of cloud services, new software and hardware energy efficiency challenges for data centers have emerged~\cite{dayarathna2015data}. 
 
 Moreover, the energy costs of running a data center are exceeding the price of its hardware, which is prejudicial to its density, scalability, and associated environmental design~\cite{jin2014survey,rasmussen2011determining,greenframework}. 
-It is essential to know that the energy consumed by a data center can be of two types: energy use by IT equipment (e.g., servers, networks, storage.) and usage by infrastructure facilities (e.g., cooling and power conditioning systems)~\cite{dayarathna2015data,portela2016}.
+It is essential to know that the energy consumed by a data center can be of two types: energy use by \gls{it} equipment (e.g., servers, networks, storage.) and usage by infrastructure facilities (e.g., cooling and power conditioning systems)~\cite{dayarathna2015data,portela2016}.
 
 
 The amount of energy used by these two components changes with the established architecture. Some articles that analyze the energy consumption of the data centers have found that between 40\% and 50\% of the energy used in the data centers comes from cooling systems. While servers and storage devices consume about 26\%, being the second most consumed in a data center \cite{portela2016,dayarathna2015data,info2007top,VANHEDDEGHEM201464}. 
 Additionally, the energy efficiency increase of servers is far below estimates~\cite{graefe2008database,jin2014survey}.
 
-The energy efficiency of servers appears to have untapped potential. In general, database servers are the largest consumers of computing resources in data centers, making DBMS one of the largest energy consumers. A particular usage of these systems is data systems warehousing. Data systems warehousing seeks to store the information of an organization, to facilitate the decision recovery processes that involve the decision-makers. These systems can integrate information from different sources, store historical and current data that can be a source of information that, when properly exploited, can guarantee relevant advantages in the market segments in the market segments where the companies fit. The accumulation of this historical information makes these systems elements with a high growth rate \cite{inmon1996data,gonccalves2014estabelecimento,inmon1995data}. 
+The energy efficiency of servers appears to have untapped potential. In general, database servers are the largest consumers of computing resources in data centers, making \gls{dbms} one of the largest energy consumers. A particular usage of these systems is data systems warehousing. Data systems warehousing seeks to store the information of an organization, to facilitate the decision recovery processes that involve the decision-makers. These systems can integrate information from different sources, store historical and current data that can be a source of information that, when properly exploited, can guarantee relevant advantages in the market segments in the market segments where the companies fit. The accumulation of this historical information makes these systems elements with a high growth rate \cite{inmon1996data,gonccalves2014estabelecimento,inmon1995data}. 
 
 
 
 %\section{Motivation}
 
 
-Since there are so many distributed database management systems available, choosing one can be difficult. While DBMS performance benchmarking is a supportive approach to deciding between different DBMS, due to the need to reduce the power consumption of database servers, that isn't the only factor nowadays \cite{greenframework,seybold2019mowgli}. This urge has drawn attention from some well-known journals and conferences in the database field \cite{greenframework}. 
+Since there are so many distributed database management systems available, choosing one can be difficult. While \gls{dbms} performance benchmarking is a supportive approach to deciding between different \gls{dbms}, due to the need to reduce the power consumption of database servers, that isn't the only factor nowadays \cite{greenframework,seybold2019mowgli}. This urge has drawn attention from some well-known journals and conferences in the database field \cite{greenframework}. 
 Some examples are the Journal of Network and Computer Applications \cite{greenframework}, \glsxtrshort{edt} \cite{gesi2008enabling}, \glsxtrshort{SIGMOD} \cite{xu2010building} , IEEE Data Engineering Bulletin \cite{lang2011rethinking}, \glsxtrshort{VLDB} \cite{pelley2011query},and \glsxtrshort{SSDBM} \cite{tu2011power}.
 
- With this surge, we face the challenge of not choosing only an energy-efficiency DBMS or performance DBMS but a performance-energy efficient one.
+ With this surge, we face the challenge of not choosing only an energy-efficiency \gls{dbms} or performance \gls{dbms} but a performance-energy efficient one.
  
- 
- Choosing an energy-efficient DBMS comes with two main problems common to energy-efficient software development: the lack of knowledge on green software nowadays software engineers and the lack of tools to reason about software energy consumption~\cite{10.1145/3154384,10.1145/2884781.2884810}. 
 
-Consequently, software engineers tend to use existing software benchmark tools and (runtime) profilers to reason about the energy consumption of the software. The usual intuition is that faster software is also greener software. However, as several studies have shown,~\cite{10.1145/3125374.3125382},  time is not the only factor in the software's energy consumption, and slower software may be more energy-efficient than faster software. In the context of DBMS, software developers face another challenge: the lack of energy consumption knowledge in DBMS.
+ Choosing an energy-efficient \gls{dbms} comes with two main problems common to energy-efficient software development: the lack of knowledge on green software of software developers and the lack of tools to reason about software energy consumption~\cite{10.1145/3154384,10.1145/2884781.2884810}. 
+
+Consequently, software engineers tend to use existing software benchmark tools and (runtime) profilers to reason about the energy consumption of the software. The usual intuition is that faster software is also greener software. However, as several studies have shown,~\cite{10.1145/3125374.3125382},  time is not the only factor in the software's energy consumption, and slower software may be more energy-efficient than faster software. In the context of \gls{dbms}, software developers face another challenge: the lack of energy consumption knowledge in \gls{dbms}.
 
 
 
-Thus, this thesis aims at reducing the lack of knowledge on the energy efficiency of the most popular DBMS, making it easier for developers and enterprises to choose the DBMS when they are concerned about energy efficiency and energy proportionality. A significant aspect of our work that distinguishes it from previous works in this field is that our motivation is to explore the real impact of these systems in the most realistic environment.
+Thus, this thesis aims at reducing the lack of knowledge on the energy efficiency of the most popular \gls{dbms}, making it easier for developers and enterprises to choose the \gls{dbms} when they are concerned about energy efficiency and energy proportionality. A significant aspect of our work that distinguishes it from previous works in this field is that our motivation is to explore the real impact of these systems in the most realistic environment.
 
 
 \section{Research Questions}
 \label{sc:rq}
 
 
-As previously mentioned, this research aims at understanding: \textit{Which \gls{dbms} software is the greenest running in a real-world environment, and what is the difference between them in terms of energy consumption?} Moreover, as \gls{dbms} relies on intensive disk operations, we also want to reason about disk energy consumption. Finally, we wish to study the energy impact of having multiple users performing real-world DBMS actions.
+As previously mentioned, this research aims at understanding: \textit{Which \gls{dbms} software is the greenest running in a real-world environment, and what is the difference between them in terms of energy consumption?} Moreover, as \gls{dbms} relies on intensive disk operations, we also want to reason about disk energy consumption. Finally, we wish to study the energy impact of having multiple users performing real-world \gls{dbms} actions.
 
 Thus, this thesis wishes to answer the following three research questions:
 
 
 \begin{itemize}
-  \item \textbf{RQ1}:\textit{Which Database Management system is the most energy-efficient?}
-In this research question, we want to understand which DBMS is the greenest in both CPU and disk energy consumption. Moreover, we would like to understand the DBMS energy efficiency at the CPU level and the disk level. This research question is vital because DBMS heavily relies on accessing external memory and CPU operations. Understanding this can help choose the greenest DBMS in different contests: For example, when we need to perform intensive and complex queries, which demand heavy CPU computations, which DBMS should we choose?
+  \item \textbf{RQ1}:\textit{Which \acrlong{dbms} is the most energy-efficient?}
+In this research question, we want to understand which \gls{dbms} is the greenest in both \gls{cpu} and disk energy consumption. Moreover, we would like to understand the \gls{dbms} energy efficiency at the \gls{cpu} level and the disk level. This research question is vital because \gls{dbms} heavily relies on accessing external memory and \gls{cpu} operations. Understanding this can help choose the greenest \gls{dbms} in different contests: For example, when we need to perform intensive and complex queries, which demand heavy \gls{cpu} computations, which \gls{dbms} should we choose?
 
- \item \textbf{RQ2}:\textit{Which Database Management System has the best energy versus runtime tradeoff?}
-With this research question, we desire to understand which DBMS has the better energy consumption per performance. For this, we want to know which one spent less energy per performance metric. This research question is necessary because choosing energy-friendly DBMS does not imply a DBMS with the worst performance, so by doing this research question. We want to understand the DBMS most suited for performance and low energy consumption.
+ \item \textbf{RQ2}:\textit{Which \acrlong{dbms} has the best energy versus runtime tradeoff?}
+With this research question, we desire to understand which \gls{dbms} has the better energy consumption per performance. For this, we want to know which one spent less energy per performance metric. This research question is necessary because choosing energy-friendly \gls{dbms} does not imply a \gls{dbms} with the worst performance, so by doing this research question. We want to understand the \gls{dbms} most suited for performance and low energy consumption.
  
 %\discuss{Não será esta a pergunta? \textit{Which Database Management Systems has the best energy versus runtime tradeoff?} Parece-me Bem}
  
-  \item \textbf{RQ3}:\textit{How does the increasing number of users of the Database Management Systems impact their energy consumption? } While some DBMS may be energy-efficient at the CPU level and others at the disk storage level, we want to understand the overall impact the user's traffic has on the different DBMS on the overall energy consumption. Here means that we want to comprehend how the scalability of DBMS affects energy consumption.
+  \item \textbf{RQ3}:\textit{How does the increasing number of users of the \acrlong{dbms} impact their energy consumption? } While some \gls{dbms} may be energy-efficient at the \gls{cpu} level and others at the disk storage level, we want to understand the overall impact the user's traffic has on the different \gls{dbms} on the overall energy consumption. Here means that we want to comprehend how the scalability of \gls{dbms} affects energy consumption.
 \end{itemize}
 
 \section{Document Structure}
@@ -76,9 +76,9 @@ The remaining chapters of this thesis are into five parts. The following is a li
 
 
 \begin{itemize}
-    \item \textbf{Chapter 2 - Literature Review:}  Here, we present the literature review needed for this project. This chapter includes a description of the brief history of DBMS, its advantages, and different DBMS models. Then an introduction to Green Software and related work in the area. This chapter ends with an explanation of energy consumption and its monitoring tools.
-    
-    \item \textbf{Chapter 3 - System Prototype:}  This chapter details our study on a design and methodology level. Additionally, it explains the energy model used and DBMS studied. 
+    \item \textbf{Chapter 2 - Literature Review:}  Here, we present the literature review needed for this project. This chapter includes a description of the brief history of \gls{dbms}, its advantages, and different \gls{dbms} models. Then an introduction to Green Software and related work in the area. This chapter ends with an explanation of energy consumption and its monitoring tools.
+
+    \item \textbf{Chapter 3 - System Prototype:}  This chapter details our study on a design and methodology level. Additionally, it explains the energy model used and \gls{dbms} studied. 
     
     \item \textbf{Chapter 4 - Results:}  Here is the chapter that shows and analyses the results obtained in this study. First, start by showing and explaining the graph visualization made and then analyzing these graphs.
     
@@ -87,3 +87,6 @@ The remaining chapters of this thesis are into five parts. The following is a li
     \item \textbf{Chapter 6 - Conclusion and Future Work:} The last chapter of this dissertation includes a conclusion to the research questions, final considerations, and future work proposals to give continuity and improvement to this study.
     
 \end{itemize}
+
+
+

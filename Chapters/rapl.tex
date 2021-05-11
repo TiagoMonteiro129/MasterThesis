@@ -23,7 +23,7 @@
         \item \textbf{Package}: the package domain refers to the package's energy consumption of the entire socket, including the core and uncore components energy ~\cite{intel64and}.
         \item \textbf{PP0/Core Power Plane 0}: This domain measurement the energy consumption of all processors socket~\cite{intel64and,portela2016}.
             \item \textbf{PP1/Graphics Power Plane 1}: This domain measures the energy consumed by all processors in a \gls{gpu}.
-        \item \textbf{DRAM}: This Domain refers to the energy consumption of random access memory (RAM)~\cite{intel64and,portela2016}.
+        \item \textbf{DRAM}: This Domain refers to the energy consumption of \gls{ram}~\cite{intel64and,portela2016}.
         \item \textbf{Psys}: Intel \textit{Skylake} has introduced a new \gls{rapl} Domain named PSys. It monitors and controls the thermal and power specifications of the entire SoC and it is particularly useful when the source of power consumption is neither the \gls{cpu} nor the \gls{gpu} \cite{raplpref}.
     \end{itemize}
     For multi-socket server systems, each socket reports its own \gls{rapl} values \cite{raplpref}.

@@ -1,32 +1,32 @@
 \chapter{Threats to Validity}
 \label{cha:Threats}
 
-This chapter is dedicated to threats that could endanger the quality of the presented results and conclusions. Here we present every threat to validity found in four categories as defined in \citeauthor{cook1979quasi}~(\citeyear{cook1979quasi}): 
+Here we speak about risks that could threaten the accuracy of the presented results and conclusions. Also, we divide every threat to validity found into four categories as defined in  \citeauthor{cook1979quasi}~(\citeyear{cook1979quasi}): 
 
 \paragraph{Conclusion Validity}
 %Resumo da categoria Conclusion Validity
 In this category are the threats which may influence the capacity to draw correct conclusions~\cite{10.5555/2349018}.
     
 %the reliability of measures.
-Another threat of this category is the reliability of measures. This study has been made a comparison between the different consumption, and performance in every DBMS.  Also, we did comparisons between different subsystems like Package, DRAM, or secondary storage. Also, all DBMS execution and benchmark in a equal manner.  Every test was executed ten times and calculated the median, mean, standard deviation, min, and max values of these tests.
+Another threat of this category is the reliability of measures. In this thesis, we made various comparisons between the different consumptions and performance in every \gls{dbms}. In addition, comparisons between subsystems, such as Package, \gls{dram}, or secondary storage. Also, all \gls{dbms} execution and benchmark were in an equal manner, and every test was executed ten times, and calculated the median, mean, standard deviation, min, and max values of these tests. So our measures are reliable.
 
 %Fishing (ter opçao de uma base de dados inves de outra)
 
-Fishing for particular results can be an issue since the analyses are no longer independent~\cite{10.5555/2349018}. Here, it doesn't apply because this study isn't trying to promote any DBMS, and it isn't looking for any specific outcome.
+Fishing for particular results can be an issue since the analyses are no longer independent~\cite{10.5555/2349018}. Here, it doesn't apply because this study isn't trying to promote any \gls{dbms}, and it isn't looking for any specific outcom
 
 %reliability of treatment implementation
 
-Reliability of treatment implementation is another issue on conclusions valid. The software used was made by external developers. So, all the software made is independent of this study and was reused here to satisfy the study needs.
+Reliability of treatment implementation is another issue on conclusions validity. The software used was made by external developers. So, all the software made is independent of this study, and we reused it here to satisfy our needs.
 
 %random heterogeneity of subjects ( usamos apenas algumas base de dados)
 
-The last threat is concerning random heterogeneity of subjects, while we only study four DBMS, this set includes some of the most popular ones and even different data models making. Here the only restriction was the HammerDB support.
+Random heterogeneity of subjects is the last threat concerning our study. While we only compare four \gls{dbms}, this set includes some of the most popular ones, and even if we wanted more variety, we have the restriction of the HammerDB compatibility.
 
 %HAMMERDB E OS SEUS RESULTADOS e conclusions
-Regarding the Hammerdb results conclusions, it was decided to use the TPM and NOPM to compare between each DBMS. This may not be the most suitable thing to do. While NOPM can be used to compare between different DBMS and is the optimal way to analyze DBMS, the same can't be said of TPM because it is not a metric recommended to compare different DBMS by the developers of the HammerDB ~\cite{hammerdb}. This happens because this value cannot be consistent between different databases. After all, every database reports different transaction rate metrics in their online tools.
 
 
-
+Regarding the Hammerdb results conclusions, we only compared \gls{tpm} and \gls{nopm} between each \gls{dbms}. Comparing these two metrics may not be the most appropriate thing to do. While \gls{nopm} is used to compare different \gls{dbms} and is the optimal way to analyze \gls{dbms}, the same can't be said of \gls{tpm} since it is not a recommended metric to compare \gls{dbms}~\cite{hammerdb}.
+The unreliability of these metrics happens because every database reports different transaction rate metrics in their online tools
 
 
 
@@ -37,20 +37,20 @@ Regarding the Hammerdb results conclusions, it was decided to use the TPM and NO
 Here are threats that involve the generalization of the results to the concept or theory behind the experiment~\cite{10.5555/2349018}.
 
 %Inadequate preoperational explication
-The first threat here is Inadequate pre-operational explication of constructs. This threat means that the constructs are not sufficiently defined before they are measured~\cite{10.5555/2349018}. Here, it is measure energy and HammerDB. So the measurements here were clear, making this issue minor or nonexistent here.
 
+The first threat here is the inadequate pre-operational explication of constructs. This threat means that the constructs are not sufficiently defined before they are measured~\cite{10.5555/2349018}. Here, we measure energy and HammerDB. So the measurements were clearly defined, making this issue minor or nonexistent here
 
 %Interaction of different treatments (nao tem ruido) e pausas entre execuçoes e testes de hammerdb
-Another threat here is the interaction of different treatments is a possible issue related to if the subject is involved in more than one study that may interact~\cite{10.5555/2349018}. This does not happen here because we guarantee that only the minimum processes required to run each test is running. Additionally,  a two-minute idle time rest was essential to making the system to cool down to decrease overheating between each execution. This allows the system to treat garbage collecting and not affect the results with these actions. Also, every database has been analyzed in the same environment where each script was tested ten times, and every similar were equal in terms of workload configuration on HammerDB making all DBMS tested by the same rules.
-
+Another danger is the interaction of different treatments, which could be a problem if the subject enrolls in several studies that could overlap~\cite{10.5555/2349018}. That does not happen here because we guarantee that only the minimum processes required to run each test are running. Additionally, a two-minute idle time rest was essential to the system cool down to decrease overheating between each execution, allowing the system to treat garbage collecting and not affect the results with these actions. In addition, when analyzing every database, they are in the same environment where we execute each script, which was similar in terms of workload configuration on HammerDB making all \gls{dbms} tested by the same rules
 
 %Mono-method bias
-Mono-method bias is another issue. This issue is about the use of a single type of measure that involves a risk that the experiment could be misleading~\cite{10.5555/2349018}. Even though here we only use the same methods to measure energy. However, both are known to be very precise and reliable for measuring energy. So this doesn't affect the quality of the results.
+
+Mono-method bias is another issue, and it is about the usage of a single type of measure that involves a risk that the experiment could be misleading~\cite{10.5555/2349018}. Even though here we only use the same methods to measure energy. However, both are known to be very precise and reliable for measuring energy consumption. So this doesn't affect the quality of the results.
 
 %mono-method operation  
-The last threat in this category is the mono-operation bios concern in that if the experiment includes only a single case may under-represent the construct and thus not give the full picture of the theory~\cite{10.5555/2349018}. This doesn't apply here because even though we only use one context, the context of a real environment is very reliable. After all, it represents an overall usage of a DBMS, making these results credible.
 
-
+The last threat in this category is the mono-operation bios, which is the experiment that includes only a single case, and it may under-represent the construct and thus does not give the whole picture of the theory~\cite{10.5555/2349018}.
+Therefore, it does not apply here because even though we only use one context, the context is very reliable. After all, it represents an overall usage of a \gls{dbms}, making these results credible
 
 
 
@@ -62,11 +62,7 @@ Threats to internal validity are influences that can affect the results of the s
 
 %Instrumentation and %Mediçao dos valores de escrever numa estrutura e %Asseguramos a sync dos processos
 
-One of these threats is instrumentation. This threat is the effect of the artifacts used for the execution of the experiment~\cite{10.5555/2349018}. In this case, it was used scripts to collect the energy and execute HammerDB. Despite this, the scripts used on HammerDB are simple scripts to orchestrate the flow of SQL statements to the database to generate the required load. The other script used is to call software that executes energy measurement frameworks, where this software ensures that RAPL and Arduino are in sync, and saves in a struck in C and write the energy measurements inside it.  This can be seen as an overhead during measurements. But because this happens in every execution, this impact can be considered non-important. 
-
-
-
-    
+One of these threats is instrumentation. This threat is the effect of the artifacts used for the execution of the experiment~\cite{10.5555/2349018}. In this case, it was used scripts to collect the energy and execute HammerDB. Despite this, the scripts used on HammerDB are simple scripts to orchestrate the flow of \gls{sql} statements to the database to generate the required load. The other script used is to call software that executes energy measurement frameworks, where this software ensures that \gls{rapl} and Arduino are in sync, and saves in a struck in C and write the energy measurements inside it.  This can be seen as an overhead during measurements. But because this happens in every execution, this impact can be considered non-important. 
 
 \paragraph{External Validity}
 
@@ -77,19 +73,18 @@ This category is concerned with the generalization of the results to industrial 
 
 %Interaction of selection and treatment.
 
-Interaction of selection and treatment is the selection made not representative of the population wanted to generalize ~\cite{10.5555/2349018}. This doesn't apply in this study, because the databases selected are among the most popular on the market. Consequently, this applies only to an industrial environment in which such databases are used or intend to use.
+
+Interaction of selection and treatment is the selection made not representative of the population wanted to generalize~\cite{10.5555/2349018}. It doesn't apply here because the databases selected are among the most popular on the market. As a result, this only applies to an industrial setting where such databases are used or may be used.
 
 %Interaction of setting and treatment
 
-Another threat in this category is the interaction of setting and treatment, this is the effect of not having the experimental settings or materials representative of industrial practice~\cite{10.5555/2349018}.  In this study case, the benchmark tool HammerDB reproduces the industrial market because it is a well know open open-source tool used by different companies like Oracle, IBM, Intel, Dell/EMC HPE, Huawei, Lenovo, and hundreds more. Besides, the compilers, software versions, and computer used are recent and in line with nowadays industry. It is possible to adapt the Arduino to any industrial system, but it has to be calibrated. In the \citeauthor{portela2016} study, there is a calibration for Arduino used in this work. 
+
+Another threat in this category is the interaction of setting and treatment. It is the effect of not having the experimental settings or materials representative of industrial practice~\cite{10.5555/2349018}. In this study case, the benchmark tool HammerDB reproduces the industrial market because it is a well-known open-source tool used by different companies like Oracle, IBM, Intel, Dell/EMC HPE, Huawei, Lenovo, and hundreds more. Besides, the compilers, software versions, and computers used are recent and in line with industry standards. It is possible to adapt the Arduino to any industrial system, but it needs calibration. In the \citeauthor{portela2016} study, there is a calibration for Arduino used in this work. 
 
 
-
-
-
-%Garantimos usar sempre o mesmo sistema e sempre a mesma versão das DBMS e generalização dos ddos e que o dados podem ser replicados
-%As for results, One of the concerns was with the generalization of the results. The solutions obtained were the most effective at the time it was set up the analysis and because of that, it was decided to use the only one system, the same version of every DBMS and same version of HammerDB in all executions made. Measurements in different  systems and versions, might produce slightly different resulting values if replicated.
+%Garantimos usar sempre o mesmo sistema e sempre a mesma versão das \gls{dbms} e generalização dos ddos e que o dados podem ser replicados
+%As for results, One of the concerns was with the generalization of the results. The solutions obtained were the most effective at the time it was set up the analysis and because of that, it was decided to use the only one system, the same version of every \gls{dbms} and same version of HammerDB in all executions made. Measurements in different  systems and versions, might produce slightly different resulting values if replicated.
 
 
 %FALAR SOBRE A SUBTRAÇÃO DOS RESULTADOS DO SISTEMA 
-%To obtain only the dynamic energy consumption of the DBMS, first it was measured the operating system without any DBMS and HammerDB running and got a median of that energy consumption at every instance. With these values, we subtract the operating system values to each CSV of the \gls{rapl} and the Arduino. That is one of the reason why the DRAM results were insignificant and near-zero in this study and why sometimes it was chosen not to show the CPU graphs. 
+%To obtain only the dynamic energy consumption of the \gls{dbms}, first it was measured the operating system without any \gls{dbms} and HammerDB running and got a median of that energy consumption at every instance. With these values, we subtract the operating system values to each CSV of the \gls{rapl} and the Arduino. That is one of the reason why the \gls{dram} results were insignificant and near-zero in this study and why sometimes it was chosen not to show the CPU graphs. 
