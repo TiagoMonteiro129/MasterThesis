@@ -1,0 +1,132 @@
+This section will analyze and discuss the results obtained in this study. 
+The main objective is to understand the energy consumed by different DBMS.
+ We will try to understand how the CPU and secondary storage energy consumption and to try to related to the performance of which DBMS. Additionally, we want to understand the impact of different environments (number of users) on energy consumption on which DBMS.
+ \subsection{Results}
+ 
+ 
+%% MEDIANS
+
+\begin{figure*}[h]
+\centering
+\caption{Median of energy consumption on Package , Disk and Total.}
+\includegraphics[width=0.6\columnwidth]{results/median/energy.png}
+\label{fig:medianenergy}
+\end{figure*}
+
+\begin{figure*}[h]
+\centering
+\caption{Median of Transitions per minute and New orders per minute.}
+\includegraphics[width=0.6\columnwidth]{results/median/hammerdb.png}
+\label{fig:medianhammerdb}
+\end{figure*}
+
+
+\begin{figure*}[h!]
+\centering
+\caption{Median of Energy consumption per Transitions per minute.}
+\includegraphics[width=0.6\columnwidth]{results/median/energy-tpm.png}
+\label{fig:medianenergyhammerdb}	
+\end{figure*}   
+
+ \begin{figure*}[h!]
+\centering
+\caption{Median of Energy consumption per New orders per minute.}
+\includegraphics[width=0.6\columnwidth]{results/median/energy-nopm.png}
+\label{fig:}	
+\end{figure*}   
+ %% Box plots
+\begin{figure*}[h!]
+\centering
+\caption{Distribution of energy consumed.}
+\includegraphics[width=0.5\columnwidth]{results/boxplot/Packgage.png}
+\includegraphics[width=0.5\columnwidth]{results/boxplot/CPU.png}
+\includegraphics[width=0.5\columnwidth]{results/boxplot/Disk.png}
+\includegraphics[width=0.5\columnwidth]{results/boxplot/Total.png}
+\label{fig:bocplotyenergy}	
+\end{figure*}
+\begin{figure*}[h!]
+\centering
+\caption{Distribution of performance on HammerDB.}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/TPM.png}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/NOPM.png}
+\label{fig:bocplothammer}	
+\end{figure*}
+
+\begin{figure*}[h!]
+\centering
+\caption{Distribution of energy consumption per Transitions per minute.}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/Packgage-tpm.png}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/total-tpm.png}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/Disk-tpm.png}
+\label{fig:bocplottrans}	
+\end{figure*}
+
+\begin{figure*}[h!]
+\centering
+\caption{Distribution of energy consumption per New orders per minute.}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/Packgage-nopm.png}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/Disk-nopm.png}
+\includegraphics[width=0.6\columnwidth]{results/boxplot/Total-nopm.png}
+\label{fig:bocplotnumber}	
+\end{figure*}
+
+
+%% VUS
+\begin{figure*}[h!]
+\centering
+\caption{Energy consumption with different number of users.}
+\includegraphics[width=0.76\columnwidth]{results/vu/Packgage.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/CPU.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/Disk.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/Total.png}
+\label{fig:vuyenergy}	
+\end{figure*}
+\begin{figure*}[h!]
+\centering
+\caption{Performance on HammerDB with different number of users.}
+\includegraphics[width=0.76\columnwidth]{results/vu/TPM.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/NOPM.png}
+\label{fig:vuhammer}	
+\end{figure*}
+
+\begin{figure*}[h!]
+\centering
+\caption{Energy consumption per Transitions per minute with different number of users.}
+\includegraphics[width=0.76\columnwidth]{results/vu/package-tpm.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/total-tpm.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/Disk-tpm.png}
+\label{fig:vuyenergytpm}	
+\end{figure*}
+
+\begin{figure*}[h!]
+\centering
+\caption{Energy consumption per Number of new orders with different number of users.}
+\includegraphics[width=0.76\columnwidth]{results/vu/Packgage-nopm.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/Disk-nopm.png}
+\includegraphics[width=0.76\columnwidth]{results/vu/Total-nopm.png}
+\label{fig:vuyenergynopm}	
+\end{figure*}
+
+For a better understanding of the results obtained from our study, we will display some graphical visualizations of the energy consumed by the different DMBS.
+
+We all graphical visualizations, we decide not to focus and discuss the energy consumption on the RAM because values obtained were similar on every DBMS we put on the test. Also, we decide not to show in this paper the results of 10 minutes execution because it doesn't have a lot of difference between 5 minutes.
+
+First, we focus on showing the results with only one user, for that we have bar graphs in Figure \ref{fig:medianenergy} showing the median amount of energy consumption each DBMS take at Package, CPU, Disk, and global system, we also made bar graphs for the hammerdb outputs (Transitions and New orders per minute) in Figure  \ref{fig:medianhammerdb}.
+
+For a better understandable and detail of the previous results, we present in Figure \ref{fig:bocplotyenergy} the Box plot of the energy consumption of each DBMS and in Figure \ref{fig:bocplothammer} the output of the hammer DB. The box plot representation uses the median, the approximate quartiles, and the lowest and highest data points to convey the level, spread, and symmetry of a distribution of data values. It can also be easily refined to identify outlier data values and can be easily constructed by hand ~\cite{doi:10.7326/0003-4819-110-11-916}.  %referencia do box plot
+
+With the graphs mention, we only can interpret and answer the \textit{RQ1}, for the \textit{RQ2}, to generate the transitions and Number of new orders per joules per minute, we had to divide the HAMMERDB  output for the energy, then we generate the same graphs mentions before but for this new values. We can see in Figure \ref{fig:medianenergyhammerdb} the median of the TPM per joules and the NOPM per joules for the Package, CPU, Disk, and global system. We also did the box plots for the same results, in the figure \ref{fig:bocplottrans} we can see the box plot for the  TPM per joules and in the figure \ref{fig:bocplotnumber} the box plot for the number operations per energy spent per minute and both of them for Package, Disk and global amount.
+
+Finally, for the \textit{RQ3}, we did the figure \ref{fig:vuyenergy} that show the evolution of energy consumption(Y-axis) on Package, CPU, Disk and global system with the different numbers of virtual users (X-axis), the figure \ref{fig:vuhammer} shows the evolution of the performance of the hammerdb output with the different number virtual users and the figures \ref{fig:vuyenergytpm} and \ref{fig:vuyenergynopm}  shows the evolution of TPM and NOPM per joules with the different users.
+
+For a better visualization, we decide not to show some of the CPU graphs since they are very similar with the Package graphs.
+%%\begin{figure}[H]
+  %\caption{Measurement of the total consumed energy by all DBMS.}
+%  \centering
+ % \includegraphics[width=0.7\linewidth]{results/piechart.png}
+%  \label{fig:geraltotal}
+%\end{figure}
+
+\subsection{Discussion}
+
+\input{results/discussion}

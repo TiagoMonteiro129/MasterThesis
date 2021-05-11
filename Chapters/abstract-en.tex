@@ -5,20 +5,48 @@
 %%
 %% Abstract in English
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{comment}
+
 The dissertation must contain two versions of the abstract, one in the same language as the main text, another in a different language.  The package assumes that the two languages under consideration are always Portuguese and English.
 
 The package will sort the abstracts in the appropriate order. This means that the first abstract will be in the same language as the main text, followed by the abstract in the other language, and then followed by the main text. For example, if the dissertation is written in Portuguese, first will come the summary in Portuguese and then in English, followed by the main text in Portuguese. If the dissertation is written in English, first will come the summary in English and then in Portuguese, followed by the main text in English.
 
-The abstract shoul not exceed one page and should answer the following questions:
-
+The abstract should not exceed one page and should answer the following questions:
+*%
 \begin{itemize}
 	\item What's the problem?
 	\item Why is it interesting?
 	\item What's the solution?
 	\item What follows from the solution?
 \end{itemize}
+\end{comment}
+
+
+In recent years, with the growth of energy consumption by computing devices, energy efficiency is a crucial concern in the IT area due to its economics and environmental impact.  The recent but widespread use of powerful computing devices, namely smartphones, which rely on "the cloud" to store large amounts of information (like, for example, photos and videos), is demanding the construction and maintenance of large data centers. Such data centers run large-scale internet-based systems like cloud services. As a consequence, the energy consumed by data centers is growing fast, which is a crucial concern in the IT area due to its economics and environmental impact.  
+
+The growing reliance on cloud construction services is one of the main reasons for the rapid rise in research and development of energy efficient software and hardware for data centers. Nowadays, the most popular usage of data centers is the Database Management Systems (DBMS) that, normally, are responsible for the access, management, manipulation, and organization of data. While there have been advances and studies in energy-awareness in this area, there isn't enough knowledge on the energy efficiency provided by different database systems.
+
+This master thesis intends to tackle this lack of knowledge by analyzing the energy consumption of DBMS software. Through benchmarks that simulate real usage environments, this research plays a key role in improving the knowledge on the energy efficiency of DBMS. We analyze four systems, namely MySQL, Postgres, MariaDB, and Redis. Moreover, we use the HammerDB benchmark framework for the simulation of DBMS in a real environment. Thus, to have a precise knowledge of the energy consumption of DBMS, we analyze the energy consumption in various subsystems of the computer, namely like CPU, DRAM, GPU, and Disk. Moreover, we present further analysis of the energy consumption per performance ratio in all subsystems levels. 
+
+
+Our results show that, indeed, there are significant differences in the energy consumption of which DBMS and that in some scenarios, the one with better run time performance is not what consumes more energy.
+
+%This master thesis intends to tackle this lack of knowledge by analyzing the energy consumption of DBMS software. Through benchmarks that simulate real usage environments, this research plays a key role in improving the knowledge on the energy efficiency of DBMS. We analyze four systems, namely MySQL, Postgres, MariaDB, and Redis. Moreover, we use the HammerDB benchmark framework for the simulation of DBMS in a real environment. Thus, to have a precise knowledge of the energy consumption of DGMS, we analyze the energy consumption in various subsystems of the computer, namely like CPU, DRAM, GPU, and Disk. Moreover, we present further analysis of the energy consumption per performance ratio in all subsystems levels. 
+
+%Eu acrescentaria 1-2 linhas finais a dar um "cheirinho" dos teus resultados, ou as conclusoes mais interessantes. Cativar logo aqui o leitor, dar lhe vontade para ler
+%é muito especifico para o abstract:Additionally, we executed the benchmark with variations in the number of users using the system, these were made to generate a view of the evolution of the energy consumption of the system with the growth of users in the system.
+% mas é importante dar uma ideai breve dos resultados, isto é terminar o abstract com uma frase positiva:´
+
+
+
+    
+    
+    
+    
+
 
 % Palavras-chave do resumo em Inglês
 \begin{keywords}
-Keywords (in English) \ldots
+Energy Efficiency, DBMS, Green Software, Green Computing, Program Analysis.
 \end{keywords} 

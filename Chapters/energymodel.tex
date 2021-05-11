@@ -1,0 +1,78 @@
+
+\section{Energy Measure Method}
+
+\label{sc:enerymodel}
+
+Before deciding the energy model we consider in our benchmark of the DBMS, it is essential to understand that the overall energy consumption of software systems divides into two groups: consumption when idle and dynamic consumption (that is, consumption when running). 
+
+As mention in Section~\ref{energypower}, , idle consumption represents the energy needed for the system to run on minimal usage without any interference of user activity. Dynamic consumption is the energy consumed by a task or activity triggered by the user, where this energy is the difference between total consumption and idle consumption. Thus, the total energy consumed by the following equation:
+
+\begin{equation}
+E_{Total} = E_{Idle} + E_{Dynamic}
+\end{equation}$
+$
+
+Where $E_{Total}$ represents the total energy consumed by the software system consumption,  $E_{Idle}$ the idle consumption, and $E_{Dynamic}$ the dynamic consumption.
+
+\paragraph{Idle Consumption:} Idle consumption is the base consumption needed to ensure that the system is ready. It is obtained by measuring the energy consumption of the system during an interval of time. During which the system remains running with the lowest possible activity and without any user interference. 
+
+Using the frameworks mentioned in Section~\ref{energyframe}. It is possible to divide the $E_{Idle}$ subgroups that we define as relevant in Section~\ref{relevant}. The following equation presents these subgroups:
+
+\begin{equation}
+E_{Idle} = E_{Idle\_Others} + ( E_{Idle\_CPU} + E_{Idle\_DRAM} + E_{Idle\_DISK})
+\end{equation}$
+$
+
+Where $E_{Idle\_CPU}$ represents the energy consumed by the CPU when the software is in an idle model, $E_{Idle\_DRAM}$ the idle consumption of the main memory, $E_{Idle\_DISK}$ the idle consumption of the disk, and $E_{Idle\_Others}$ represent the remaining energy consumed.
+
+As mention in Section~\ref{sc:RAPL} , the $E_{Idle\_CPU}$ and $E_{Idle\_DRAM}$ can be estimated by RAPL. For measuring the $E_{Idle\_DISK}$, we will use the Arduino method mentioned in Section~\ref{arduino}.
+
+By using the RAPL Package estimation metric, which includes CPU, and GPU, the following equation can be an alternative definition for the total consumption in idle mode:
+
+
+\begin{equation}
+\label{eq:iddlepackage}
+E_{Idle} = E_{Idle\_Others} + ( E_{Idle\_Package} + E_{Idle\_DRAM} + E_{Idle\_DISK})
+\end{equation}$
+$
+
+\paragraph{Dynamic Consumption:} The dynamic energy consumption can only be determined after we have measured the idle consumption. Only then can we distinguish between idle and the energy impacts caused by the user. In this phase, any slight increase in the overall energy counts towards the dynamic consumption. Very much like in idle mode, this consumption must divide into the same groups. The following equation represents this separation :
+
+\begin{equation}
+E_{Dynamic} = E_{Dynamic\_CPU} + E_{Dynamic\_DRAM} + E_{Dynamic\_DISK}
+\end{equation}$
+$
+
+As for the idle consumption, the  $E_{Dynamic\_CPU}$ and $E_{Dynamic\_DRAM}$  can be measure with RAPL, and the  $E_{Dynamic\_DISK}$ by the Arduino. To obtain these values, we need to remove the idle consumption of the total consumption in those components. Thus, for each subsystem, the equations are as follows:
+
+
+\begin{equation}
+E_{Dynamic\_CPU} =  E_{Total\_CPU} - E_{idle\_CPU}
+\end{equation}$
+$
+
+\begin{equation}
+E_{Dynamic\_DRAM} =  E_{Total\_DRAM} - E_{idle\_DRAM}
+\end{equation}$
+$
+
+\begin{equation}
+E_{Dynamic\_DISK} =  E_{Total\_DISK} - E_{idle\_DISK}
+\end{equation}$
+$
+
+
+As in equation~\ref{eq:iddlepackage}, CPU and GPU can be estimated together by the Package metric. The dynamic consumption also translates into the following equation:
+
+\begin{equation}
+E_{Dynamic\_Package} =  E_{Total\_Package} - E_{idle\_Package}
+\end{equation}$
+$
+
+\begin{equation}
+\label{eq:DDYNAMICpackage}
+E_{Dynamic} = E_{Dynamic\_Others} + ( E_{Dynamic\_Package} + E_{Dynamic\_DISK} + E_{Dynamic\_DRAM})
+\end{equation}$
+$
+
+Through these analyzes, it is to conclude that idle consumption is not relevant to compare different DBMS on the same system since it is a static value. Therefore, we decided only to show and compare the dynamic energy consumption of all measurements in Chapter \ref{cha:Results}  for a better and easier understanding of the results obtained. 

@@ -1,5 +1,5 @@
 \begin{lstlisting}[ caption={ Arduino source code for reading the analog signal from the current sensor},label={lst:arduinocode},language=C,
-    basicstyle=\tiny, %or \small or \footnotesize etc.
+    basicstyle=\small
 ]
 void loop() {
   /* Initialization */
@@ -11,17 +11,14 @@ void loop() {
   /* Average loop */
   for(int i = 0; i < n_reads ; i++) {
     average_a0 += analogRead(sensorPin_0);
-    delay(loop_delay);
-  }
+    delay(loop_delay);  }
   /* Formula based computations */
   average_a0 /= n_reads;
   voltage = (average_a0 / 1024.0) * 5;
   current = current_eq(voltage);
   wattage = voltage * current;
   power = wattage * interval;
-
   Serial.println(power, 3);
-  Serial.flush();
-}
+  Serial.flush();}
 
 \end{lstlisting}

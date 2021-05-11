@@ -1,0 +1,72 @@
+\section{Execution}
+\label{sc:execution}
+
+
+
+
+%DESENHO DA ARQUITETURA DO Sistema.
+
+Figure \ref{fig:arch} shows the execution of the benchmark and measurements of energy consumption of DBMS, where it displays the architecture of our energy benchmarking system and the flow of actions.
+
+
+
+%Imagem
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Chapters/images/arquitetura.png}
+      \caption{Benchmark Architecture and flow of events}
+  \label{fig:arch}
+\end{figure}
+
+% Explicar 1º Passo% cada script foi executado 10 vezes
+
+
+
+As seen in Figure \ref{fig:arch}, the first action of our execution is the Benchmark initialization and execution of HammerDB. To obtain proper and reliable energy readings, we needed to diminish the effects of cold starts, warm-ups, cache effects, and other effects that may influence energy consumption. So, each scenario is executed ten times with a sleep time of 2 minutes between each execution.
+
+%In order to have proper energy readings, we need to reduce the effects of cold starts, warm-ups, cache effects, and other effects that may influence energy consumption. Thus, each script is executed 10 times with a sleep time of 2 minutes between each execution.
+
+
+%Sample do Arduino e RAPL
+
+Immediately after the start of the Benchmark execution, The measurements of the energy consumption start. The framework tools used were the ones mentioned in Section \ref{energyframe}.  In the case of the RAPL, the sample used was 100 measurements per second, and for the Arduino was ten measures per second.
+
+%Explicar o RAPLSERVER que foi usado para sync as mediçoes entre o Arduino e o RAPL.
+
+These two measurement tools are in sync throughout the entire execution. We accomplished this by using a C program that starts two independent sync threads: one that accesses the RAPL to measure the CPU's power consumption, and the other accesses the Arduino to measure the disk's power consumption. They are active during the execution of HammerDB and accumulate energy readings in static arrays to limit their computing overhead.
+
+
+%3fase
+
+The third and final phase of our execution begins after the HammerDB execution is completed. This step saves each measurement mad in its respective CSV file for further analysis.
+
+
+
+%Para reduzir os vestigios e faciltar montar diferentes dbms foi usado DOCKER
+
+
+Also, for each database, we decide to use dockers containers because it is a solution that simplifies the setup by providing a pre-built image that is portable, simple to maintain, and providing a facility to automate the applications when they are deployed into containers\cite{rad2017introduction,10.1145/2723872.2723882}. Although several studies recognize that dockers provide an overhead in running these containers\cite{chung2016using,varghese2016container,impactDocker,felter2015updated}, dockerized benchmarks can be acceptable when comparing different database systems if the idle consumption values are disregarded\cite{grambow2019safe}.
+
+
+%System Configuration
+\paragraph{System Configuration}
+
+We ran this study on a server with the following specifications presented in Table  \ref{Tab:physicalserver}, this consists of an Intel(R) Core i5-4460 3.28 GHz CPU, 16 GB of RAM, 250 GB HDD, and operating system Ubuntu 16.10 . A detailed overview of the CPU is in Table \ref{tab:cpuspec} and for Second Storage is in Table \ref{tab:diskspec}.
+
+\input{Chapters/table/psyserver}
+
+\input{Chapters/table/teste}
+
+%\input{Chapters/table/cpu}
+
+%\input{Chapters/table/disk}
+
+This system has no additional software installed or running other than required to run this research. Additionally, we had the caution to use the most recent and compatible version of all external software used here at the time of the measurements. So listed in Table \ref{Tab:softwareconfig} are all the versions used.
+
+\input{Chapters/table/software}
+
+
+
+
+
+All software artifacts shown in Figure~\ref{fig:arch} and mention in this chapter, are  available as a public repository at \url{https://github.com/greensoftwarelab/GreenSGDBS}.

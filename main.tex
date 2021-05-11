@@ -162,6 +162,7 @@
 %% FOR DEMO PURPOSES ONLY --- TO BE REMOVED by final users
 \usepackage{lipsum}
 \usetikzlibrary{matrix,positioning}
+\usepackage{multirow}
 
 %------------------------------------------------------------------
 % Costumization of some packages
@@ -218,7 +219,7 @@
                % Glossary, Acronyms, and Symbols from TOC
 %%============================================================
 
-
+\newcommand{\discuss}[1]{\textcolor{blue}{#1}\xspace}
 \title[Energy Consumption on Database Management Systems]{Energy Consumption on Database Management Systems}
 
 % UM Formatting rules doesn't include subtitles in the cover and frontpage
@@ -269,7 +270,6 @@
 \abstractfile[pt]{abstract-pt}  % Abstract in Portuguese
 \abstractfile[en]{abstract-en}  % Abstract in English
 \abstractfile[fr]{abstract-fr}  % Abstract in French
-\glossaryfile{glossary}
 \setglossarystyle{super}
 \setabbreviationstyle[acronym]{long-short}
 \acronymsfile{acronyms} 
@@ -280,24 +280,23 @@
 \addlisttofrontmatter{\listoffigures}  % The List of Figures. Comment to omit.
 \addlisttofrontmatter{\listoftables}   % The List of Tables. Comment to omit.
 \addlisttofrontmatter{\lstlistoflistings}  % The List of Code Listings. Comment to omit.
-\addlisttofrontmatter{\lstlistofalgorithms}  % The List of Algorithms. Comment to omit.
+%\addlisttofrontmatter{\lstlistofalgorithms}  % The List of Algorithms. Comment to omit.
 \addlisttofrontmatter{\glsnogroupskiptrue\setlength{\glsdescwidth}{0.8\textwidth}\printnoidxglossaries}  % The Glossary and List of Acrnonyms
 
 
 % Text chapters
 % syntax: \chapterfile{file}
-%\chapterfile{chapter1}
-%\chapterfile{chapter2}
-%\chapterfile{chapter3}
-%\chapterfile{chapter4}
 \chapterfile{Introduction}
 \chapterfile{State of the Art}
+\chapterfile{middle}
 \chapterfile{Results}
+\chapterfile{threats}
+\chapterfile{Conclusion}
 
 % Text appendixes
 % sintax: \appendixfile{file}
 % Comment if not needed
-%\appendixfile{appendix1}
+\appendixfile{appendix1}
 %\appendixfile{appendix2}
 %\annexfile{annex1}
 

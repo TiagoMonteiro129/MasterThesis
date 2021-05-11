@@ -1,0 +1,62 @@
+\section{Design}
+\label{sc:Design}
+%HammerDB
+
+%We decide to use HammerDB as it is a benchmark tool that can replicate the behavior of most cloud-based applications as a service, verify comprehensive performance and multiple metrics in a simple real-world environment on a virtual environment with virtual users~\cite{hammerdb}.
+
+%Another reason we choose HammerDB was for the automated software testing~\cite{hammerdb} so we can configure how many times the HammerDB will run and how many virtual users that he will use and for how long it will run, providing at the end of every execution the \gls{tpm} and the \gls{nopm}. With these numbers and the energy spent, we can have ample information to answer the RQ2, and with an adjustable number of users, it can assist in the RQ3.
+
+We decided to use HammerDB as a benchmark tool that can replicate the behavior of the most cloud-based applications as a service, verify comprehensive performance and multiple metrics in a simple real-world environment on a virtual environment with virtual users\cite{hammerdb}. Another reason was the automated software testing \cite{hammerdb} so we can configure how many times the HammerDB will run and how many virtual users it will use, and for how long it will run, providing at the end of every execution the \gls{tpm} and the \gls{nopm}. With these numbers and the energy spent, we can have ample information to answer the RQ2, and with an adjustable number of users, it can assist in the RQ3.
+
+
+%Cenarios
+
+%The initial step to obtaining comparable results about the energy consumed in each DBMS is to define a configuration for HammerDB for each scenario . 
+ 
+ The initial step to obtaining comparable results about the energy consumed in each DBMS is to define a configuration for HammerDB for each scenario. 
+ 
+ 
+ %-> Explicar Numero  X   de utilizadores: 1, 8, 32, 12X,
+
+%With the Research Question mentioned in Section \ref{sc:rq}, many scenarios can be deducted. These scenarios are differentiated by the number of users that we want to run in the system. So, we decide to go with four different scenarios of server participation. The first case is a server running with the lowest users possible, so we execute the benchmark with only one virtual use. A second scenario is a small group of users practicing on the server, so we run with eight virtual users. The third scenario is a simulation of the server on intensive work with a big group of users, and for that, we use 64 virtual users. The final scenario is the server saturated with users, and for that, we decide with 128 virtual users. 
+%While the first scenario is enough to answer the \textbf{RQ1} and \textbf{RQ2}, the \textbf{RQ3} needs the other three scenarios.
+
+
+With the Research Question mentioned in Section 1.5, we can deduce various scenarios. The number of users we run in the system differentiates these scenarios. So, we decide to go with four different scenarios of server participation. The first case is a server running with the lowest users possible, so we execute the benchmark with only one virtual use. A second scenario is a small group of users practicing on the server, so we run with eight virtual users. The third scenario is a simulation of the server doing intensive work with a big group of users, and for that, we use 64 virtual users. The final one is the server saturated with users, and for that, we decide with 128 virtual users. 
+While the first scenario is enough to answer \textbf{RQ1} and \textbf{RQ2}, the \textbf{RQ3} needs the others.
+%configuration
+ 
+ %For each of them, we created a script for each DBMS.  These scripts must simulate the behavior of daily usage of a DBMS. So using a custom script inside the HammerDB was out of the question, and we decide to use the TPC-C benchmark.
+ 
+ For each of them, we created a script for each DBMS.  These scripts must simulate the behavior of daily usage of a DBMS. So using a custom script inside the HammerDB was out of the question, and we decided to use the TPC-C benchmark. We decide to do one warehouse in every scenario to simplify this study, with the intention in future work to expand to more warehouses. 
+ 
+%EXPLICAR AS WAREHOUSES
+
+To simplify this study, we decide to do one warehouse in every scenario with the intention of future work to expand this study to more warehouses. 
+
+%EXPLICAR O RAM UP
+
+%Then we must decide on the time that the benchmark builds up the transaction rate by caching data in the buffer cache database before the benchmark is executed. This known as the rampup time. In our study e decide to set ramup to 1/5 of the execution time~\cite{hammerdb}.
+
+
+Then we must decide on the time that the benchmark builds up the transaction rate by caching data in the buffer cache database before the benchmark is executed. This is known as the rampup time. In our study, we decide to set the ramup to 1/5 of the execution time~\cite{hammerdb}.
+
+%tempo 
+For greater precision and adequate replication of various usage scenarios, each case was performed with 5, 10, and 30 minutes.
+
+
+
+%Final note
+Finally, in addition to the previous scripts, we also created a script that would remove idle consumption from the measured energy consumption using a previous measured idle consumption.
+
+
+
+% Falar aqui apesar de terem sido feitos, nao foram aprofundados porque os resultos são bastante parecidos
+
+
+%In Chapter \ref{cha:Results}, it is presented and discuss only the 5m tests. Even with most of the 10 and 30 minutes results measured, they aren't discussed here due to their conclusions being very similar to the conclusions of 5 minutes. These results are able in the annex.
+
+It is presented and discussed in Chapter \ref{cha:Results} only the 5m tests. Even with most of the 10 and 30 minutes results measured, they weren't discussed here due to their conclusions being very similar to the conclusions of 5 minutes. These results are available in the annex of this document.
+
+
+

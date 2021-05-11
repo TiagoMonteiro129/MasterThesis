@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Scenarios          & \multicolumn{1}{l|}{MySQL} & \multicolumn{1}{l|}{Postgres} & \multicolumn{1}{l|}{MariaDB} & Redis \\ \hline
+\multicolumn{5}{|c|}{Static Virtual User (1 VU)}                                                                       \\ \hline
+Energy Consumption & 4                          & 2                             & 3                            & 1     \\ \hline
+Performance TPM    & 4                          & 2                             & 3                            & 1     \\ \hline
+Performance NOPM   & 4                          & 1                             & 3                            & 2     \\ \hline
+Energy per TPM     & 4                          & 2                             & 3                            & 1     \\ \hline
+Energy per NOPM    & 4                          & 1                             & 3                            & 2     \\ \hline
+\multicolumn{5}{|c|}{Varied Virtual Users}                                                                             \\ \hline
+Energy Consumption & 2                          & 3                             & 4                             & 1     \\ \hline
+Performance TPM    & 4                          & 3                             & 2                            & 1     \\ \hline
+Performance NOPM   & 4                          & 3                             & 2                            & 1     \\ \hline
+Energy per TPM     & 4                          & 3                             & 2                            & 1     \\ \hline
+Energy per NOPM    & 4                          & 3                             & 2                            & 1     \\ \hline
+\end{tabular}
+\caption{Classification of each DBMS in each Scenario}
+\label{tb:conclusion}
+\end{table}

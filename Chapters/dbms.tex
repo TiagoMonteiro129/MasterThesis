@@ -1,29 +1,30 @@
 \section{Database Management Systems}
+\label{sc:DBMS}
 
-In this section it will be explained what is a \gls{dbms}, a brief history of the \gls{dbms}, the advantages of using a \gls{dbms}, show the differents of  \gls{dbms} models, understand what a benchmark should do on \gls{dbms} and show the benchmark tools used here.
 
-The \glsfirst{dbms} is the software designed to assist, maintain, and use a large set of data. This software facilitates the definition, construction, manipulation, restriction, and sharing of data ~\cite{gehrke_2002}. 
+The \glsfirst{dbms} is the software designed to assist, maintain, and use a large set of data. This software facilitates the definition, construction, manipulation, restriction, and sharing of data~\cite{gehrke_2002}. 
 
-The first general-purpose \gls{dbms}, designed and developed by Charles Bachman in the early 1960s ~\cite{haigh2016charles} and it was called The Integrated Data Store. It formed the basis for the data model of the network, which through the 1960s was standardized by the Conference on \gls{codasyl} and strongly influenced database system.~\cite{gehrke_2002,haigh2016charles}.
-
+The first general-purpose \gls{dbms} was designed and developed by Charles Bachman in the early 1960s ~\cite{haigh2016charles} and it was called The Integrated Data Store. It formed the basis for the data model of the network, which through the 1960s was standardized by the Conference on \gls{codasyl} and strongly influenced database systems~\cite{gehrke_2002,haigh2016charles}.
 In the late 1960s, IBM developed the \gls{ims} \gls{dbms}, used even today in many major installations. \gls{ims} formed the basis for an alternative data representation framework called the hierarchical data model ~\cite{gehrke_2002}. 
 
 \gls{dbms} soon entered all sectors of organizations allowing the implementation of comprehensive and indispensable information systems. Historically they have evolved from the hierarchical model, which had the problem of the relationship between the entities represented, for the Relational Model that solved the relationship problem between the entities represented, allowing great flexibility navigation and search of stored data ~\cite{gehrke_2002}.
 
 Database management continues to gain importance as more and more data is
-brought online and made ever more accessible through computer networking. With the global \gls{dbms} market reached an estimated value of almost 58.4 billion American dollars in 2019. The global \gls{dbms} industry is further expected to grow at a CAGR of 13.81\% between 2020 and 2025 to reach a value of almost 126.9 billion American dollars by 2025. We can't deny the importance of the \gls{dbms} on the world. mention the advantages of why we should be using an instead of other options.
+brought online and made ever more accessible through computer networking. The global \gls{dbms} market reached an estimated value of almost 58.4 billion American dollars in 2019. The global \gls{dbms} industry is further expected to grow at a CAGR of 13.81\% between 2020 and 2025 to reach a value of almost 126.9 billion American dollars by 2025. We can't deny the importance of the \gls{dbms} on the world. mention the advantages of why we should be using an instead of other options.
 
-The \gls{dbms} is the software that interacts with the users application programs and the database. Typically, a \gls{dbms} provides the following facilities \cite{begg}:
+The \gls{dbms} is the software that interacts with the user's application programs and the database. Typically, a \gls{dbms} provides the following facilities \cite{begg}:
 
 \begin{itemize}
     \item It allows users to define the database, through a \gls{ddl}. The \gls{ddl} allows users to specify the data types and structures and the constraints on the data to be stored in the database.
     \item It allows users to insert, update, delete, and retrieve data from the database, usually through a \gls{dml}. Having a central repository for all data and data descriptions allows the \gls{dml} to provide a general inquiry facility to this data, called a query language.
-    \item It provides controlled access to the database like a security system, which prevents unauthorized users, an integrity system, which maintains the consistency of stored data etc.
+    \item   It provides controlled access to the database like a security system, which prevents unauthorized users, an integrity system, which maintains the consistency of stored data, etc.
 \end{itemize}
 
 
 \subsection{Advantages of DBMS}
-\citeauthor{gehrke_2002} mention the advantages of why we should be using \gls{dbms} an instead of other options \cite{gehrke_2002}:
+
+
+In \citeauthor{gehrke_2002} book \cite{gehrke_2002}, he presents the main advantages of \gls{dbms}:
 
 \begin{itemize}
 \item {\textbf{Data Independence:}} Ideally, application programs should not be exposed to data representation and storage information, and the \gls{dbms} offers an abstract view of the data that hides those details.
@@ -41,7 +42,7 @@ A \gls{dbms} utilizes a range of advanced techniques to efficiently store and re
 \gls{dbms} already support several common functions between different applications and also with its high level interface. This facilitates rapid application creation in accordance with the high-level interface to the data. \gls{dbms} applications are therefore likely to be more stable than equivalent stand-alone applications since the \gls{dbms} performs several significant tasks.
 \end{itemize}
 
-Even thought have that advantages, it can bring some disadvantages:
+Even with these advantages, it can bring some disadvantages:
 
 \begin{itemize}
     \item \textbf{Danger of overkill:} For small and simple applications the use of database system is often not advisable and can have a negative impact on the overall performance. 
@@ -57,8 +58,10 @@ Every \gls{dbms} as is own way to store data but every one is define by a data m
 %The most popular \gls{dbms} today are based on the relational data model but there is a increase on the non relational \gls{dbms}~\cite{DBR}.
 
 \subsection{Relational Models}
+
+
+%Melhorar este texto:
  The relational data model is based on relational algebra and was proposed by \citeauthor{codd}~\cite{codd}.
-    
     The Relational Model made a revolution in the way that users used it as databases, which was just the manipulation of physical structures. \citeauthor{codd} believe that adopting his vision would allow users to use a higher-level language and abstraction, not depending to specify the physical representation of data and that improved the productivity for database users~\cite{codd2}.
     
     Relational Databases have specific characteristics like the structural aspect, Support for a language at least as powerful as relational algebra, and rules to manipulate data \cite{10.1145/320107.320109}.
@@ -67,17 +70,17 @@ Every \gls{dbms} as is own way to store data but every one is define by a data m
     
     A relational database is in simple terms, a set of tables. Each table contains data on aspects of one subject, such as a client, an order, a product, a team, or a city. Restrictions on the data in individual tables and even between tables may be set. It is possible to usefully represent how the tables are interrelated with a data model. Different attributes of the same table may or may not have the same domain \cite{bsql}.
  
-    This model have a lot of cautions and one of these cautions is that we have to normalize our data. Normalization is a technique for producing a set of relations with desirable properties, given the data requirements of an enterprise. Normalization is a formal method that can be used to identify relations based on their keys and the functional dependencies among their attributes \cite{begg}.
+    This model has a lot of cautions and one of these cautions is that we have to normalize our data. Normalization is a technique for producing a set of relations with desirable properties, given the data requirements of an enterprise. Normalization is a formal method that can be used to identify relations based on their keys and the functional dependencies among their attributes \cite{begg}.
 
     Other rules this model have is in their transaction, In this context, a transaction is an operation, or a chain of operations, carried out by a single user or application program that accesses or modifies the database content. A transaction is a logical work unit that brings the database from one state of consistency to another. Transactions can be successfully terminated ~\cite{begg}.  A transaction should follow the four basic properties \gls{acid} as they know which stand for the first letter of the proprieties ~\cite{10.1145/289.291}:
 \begin{itemize}
     \item \textbf{Atomicity}: The transaction operations are all done or none are. It is an all or none rule.
-    \item \textbf{Consistency}: A transaction must transform the database from one consistent state to another consistent state and any of states the database can be not consistent.
+    \item \textbf{Consistency}: A transaction must transform the database from one consistent state to another consistent state and any of the states the database can be not consistent.
     \item \textbf{Isolation}: Different Transaction are independent one of other.
-    \item \textbf{Durability}: After a transaction, the effect of a transaction have a permanently recorded on the database and must survive a system failure.
+    \item \textbf{Durability}: After a transaction, the effect of a transaction have permanently recorded on the database and must survive a system failure.
 \end{itemize}
 
-Nowadays, relational \gls{dbms} are the most popular in the market following the ranking made and study by DB-Ranking~\cite{DBR} the 5 market leaders in Relational \gls{dbms} are:
+Nowadays, relational \gls{dbms} are the most popular in the \gls{dbms} market following the ranking made and study by DB-Ranking~\cite{DBR} the five market leaders in Relational \gls{dbms} are:
 
 \begin{itemize}
     \item Oracle
@@ -87,9 +90,12 @@ Nowadays, relational \gls{dbms} are the most popular in the market following the
     \item IBM Db2
 \end{itemize}
 
-Even thought that IBM developed one of the first \gls{dbms}, they struggle to be most popular \gls{dbms} because of the competitiveness of this market. However with the rise in internet traffic in recent years, the volume of accumulated data is increasingly increasing to a scale of 1,000 terabytes and even 100 \gls{pb}. The scalability of \gls{sql} storage is thus being challenged~\cite{wuoverview}.
+Even though that IBM developed one of the first \gls{dbms}, IBM struggle to be the most popular \gls{dbms} because of the competitiveness of this market. However, with the rise in internet traffic in recent years, the volume of accumulated data is increasingly increasing to a scale of 1,000 terabytes and even 100 \gls{pb}. The scalability of \gls{sql} storage is thus being challenged~\cite{wuoverview}.
 
-Environments because it is not easy to put different tables across different servers, since these databases are built to manage data on the same server rather than partitioning data. In addition, it may bring additional complexity to the data model when data does not easily fit into a table, which should be avoided. The query language used in these systems, as it can only deal with standardized information, can also be a problem. Moreover, conventional \gls{sql} solutions do not work well with agile modern technology development, which can require large quantities of complicated code and in some cases, even reduced performance. NoSQL solutions have become a very hot subject and alternative to \gls{sql} databases in order to solve these scalability and performance problems ~\cite{han2011survey,wuoverview}.
+To scale the relational DBMS it is required to replace existing hardware with more efficient ones, which come at a high cost. Besides, if this improvement is not enough to accommodate all data volumes, the alternative is to spread the device through several servers.
+Relational databases have a hard time adapting and scale to distributed environments because it is not easy to put different tables across different servers since relational databases are built to manage data on the same server rather than partitioning data.  Additionally, it may bring additional complexity to the data model when dealing with a large quantity of data that does not easily fit into a table, which can lead to a decline in the efficiency of reads and writes.  Also, the query language is a problem, as it can only deal with standardized information. Moreover, conventional SQL solutions don't work well with agile development, which can require large quantities of complicated code  \cite{han2011survey,wuoverview}.
+
+ NoSQL solutions have become a hot subject and alternative to SQL databases to solve these scalability and performance problems ~\cite{han2011survey,wuoverview}.
 
 \subsection{Non Relational Data Models}
 
@@ -97,7 +103,7 @@ The early concept of \gls{nosql} was first used in 1998 by Carlo Strozz \cite{No
 
 Nowadays, the term \gls{nosql} start to regain popularity with the rise of the era of Big Data \cite{nosqlchoose}. Big data was defined by Apache Hadoop in 2010 as “datasets which could not be captured, managed, and processed by general computers within an acceptable scope.”. Big data is linked to Internet companies' services and that is rising rapidly nowadays. For example, Google processes data from hundreds of \gls{pb}, Facebook produces log data of more than 10 \gls{pb} per month, or Baidu, a Chinese business, processes data from tens of \glsplural{pb} \cite{chen2014big}. Even though traditional \gls{sql} databases have proven to be highly effective, secure, and consistent in terms of structured (or relational) data storage and processing, they fall short of Big Data processing, which is characterized, among other things, by the large volume, variety, velocity, openness, lack of structure and high visualization demands \cite{nosqlchoose,https://doi.org/10.1002/cpe.3398}.
 
-With this information, the new definition of \gls{nosql} merges as \acrlong{nosql}. This term means that any \gls{dbms} that doesn't follow all proprieties and principles of the relational models ~\cite{wuoverview,nosqlchoose,breiefreview}. ~
+With this information, the new definition of \gls{nosql} merges as \glsxtrlong{nosql}. This term means that any \gls{dbms} that doesn't follow all proprieties and principles of the relational models ~\cite{wuoverview,nosqlchoose,breiefreview}. ~
 
 \gls{nosql} systems generally have six key features \cite{cattell2011scalable}:
 \begin{itemize}
@@ -114,7 +120,7 @@ A key feature of \gls{nosql} systems is replicating and partitioning data
 over many servers. This allows them to support a large number of simple read/write operations per second. This simple operation load is traditionally called \gls{oltp}, but it is also common in modern web applications \cite{cattell2011scalable}.
 
 To guarantee the integrity data in all levels of data management, \gls{sql} implement \gls{acid} proprieties on them transitions. However, these proprieties have poor scaling. With the face of these problems, the \gls{cap} theorem arises on \gls{nosql} databases.
-\acrshort{cap} was design by \citeauthor{brewer2000towards}\cite{brewer2000towards} stands for \acrlong{cap}, and this theorem consist in 3 different aspects \cite{nosqlsyed,gilbert2012perspectives}: 
+\glsxtrshort{cap} was designed by \citeauthor{brewer2000towards}\cite{brewer2000towards} stands for \glsxtrlong{cap}, and this theorem consist in 3 different aspects \cite{nosqlsyed,gilbert2012perspectives}: 
 \begin{itemize} 
     \item \textbf{Strong Consistency:} All clients see the same version of the data, even on updates to the dataset.
     \item \textbf{Availability:} All clients can always find at least one copy of the requested data, even if some of the machines in a cluster are down.
@@ -122,13 +128,13 @@ To guarantee the integrity data in all levels of data management, \gls{sql} impl
 \end{itemize}
 
     \begin{figure}[h!]
-    \caption{Visualization of \gls{cap} theorem.}
     \centering
     \includegraphics[width=0.65\columnwidth]{Chapters/images/Visualization-of-CAP-theorem.png}
-    \label{fig:cap}
+        \caption{Visualization of \gls{cap} theorem.}
+    \label{fig:capthoerm}
     \end{figure}
 
-The \gls{cap} Theorem proposes that only two of the three different aspects of scaling out can be achieved fully at the same time, in figure \ref{fig:cap} we can send the 3 states that can be archive. Still systems can be improved towards the maximum proximity of the three characteristics, this state are \cite{ericcap12,cattell2011scalable,10.1145/289.291,brewer2000towards}:
+The \gls{cap} Theorem proposes that only two of the three different aspects of scaling out can be achieved fully at the same time, in Figure \ref{fig:capthoerm} we can send the 3 states that can be archive. Still systems can be improved towards the maximum proximity of the three characteristics, this state are \cite{ericcap12,cattell2011scalable,10.1145/289.291,brewer2000towards}:
 
 \begin{itemize}
     \item \textbf{CA:} databases can only be consistency and availability at the same time if they don't have data into multiple server peers.
@@ -141,22 +147,22 @@ The \gls{cap} Theorem proposes that only two of the three different aspects of s
 Many of the \gls{nosql} databases above all have loosened up the requirements on Consistency to achieve better Availability and Partitioning. This resulted in systems know as \gls{base}  \cite{base,cattell2011scalable,Startednosql}:
 \begin{itemize}
     \item \textbf{Basic availability:} Each request is guaranteed a response successful or failed execution
-    \item \textbf{Soft state:} The state of the system may change over time, at times without any input (for eventual consistency).
+    \item \textbf{Soft state:} The state of the system may change over time, at times without any input.
     \item \textbf{Eventual consistency:} The database may be momentarily inconsistent but will be consistent eventually.
 \end{itemize}
 
 
-There is been a lot of approaches and models on \gls{nosql}. This lets's create a bunch of new categories for the \gls{nosql} data models. The most popular are Key-value stores, Document stores, Graph databases, and Wide Column Stores \cite{nosqlchoose,5410700,li2013performance}.
+There is been a lot of approaches and models on \gls{nosql}. This led to creating a bunch of new categories for the \gls{nosql} data models. The most popular are Key-value stores, Document stores, Graph databases, and Wide Column Stores \cite{nosqlchoose,5410700,li2013performance}.
 
-In the next subsections, it will explain the above-mentioned \gls{nosql} models:
+With more detail, it will explain the above-mentioned \gls{nosql} models:
 
 
-\subsubsection{Key-value stores}
+\paragraph{Key-value stores}
 
 The Key-value stores is the most simple model as the name suggest, this database only stores data as pair key and values, where stored values can be retrieved with the respective key. With this simplicity means that does any complex structured because data is organized as an array of entries but these simple systems are normally not adequate for complex applications.
 These models are popular due to their simplicity, stability and efficiency, as they have, in general, linear access to the database data and usually, these models are used when you want a good cache management \cite{wuoverview,Startednosql,tiwari_2011,nosqlchoose,sabrina1448}. 
 
-In Figure \ref{fig:KV1} shows an example of this model. If for the sets a hash map or an associative array is used as a data structure, information can be retrieved in constant time.
+In Figure \ref{fig:keyvalue1} shows an example of this model. If for the sets a hash map or an associative array is used as a data structure, information can be retrieved in constant time.
 
 \input{Chapters/figurekeyvalue}
 
@@ -164,7 +170,7 @@ It is possible to classify key-value stores into various groups. If they store d
  
 The drawbacks are that all key-value stores share, they only support basic key/value data structures, joins are not supported and among the various implementations there is no specific query language \cite{sabrina1448}.
 
-\subsubsection{Document stores}
+\paragraph{Document stores}
 
 Data stores, also known as document-oriented \gls{dbms}. This model is a type of database that stores uniform fields with a non-standard amount of information for each record and is distinguished by its schema-free data organization. There is no need for records or documents to have a standardized layout, and different records which have different columns. For each record, the types of individual column values can be different, and columns can have more than one value. This is possible by encapsulating documents such as JSON, XML, BSON or similar metadata technologies in a particular document type in order to compose nested semi-structured content ~\cite{nosqlchoose,sabrina1448,tiwari_2011,wuoverview,vera2015data}.
 
@@ -174,7 +180,7 @@ In the figure \ref{fig:docexample} of a structure of a documents on a document s
 
 \input{Chapters/documentfig}
 
-\subsubsection{Graph stores}
+\paragraph{Graph stores}
 
 Graph stores are also known as graph-oriented or graph-oriented \gls{dbms}.
 Databases are therefore distinct from specialized data management tools that in their implementation, use graph notions to represent data as nodes and edges in graph structures that represent relationships between nodes. They make it easy to process the data in that form and easy to calculate specific graph properties, such as the number of steps required to get from one node to another node. Graph databases allow us to enforce specifications for graph processing at the same level of query language as we use for graph data fetching without the additional abstraction layer for graph nodes and edges. This implies less overhead and more versatility and performance for graph processing~\cite{6313676,angles2008survey,nosqlchoose}.
@@ -183,7 +189,7 @@ Figure \ref{fig:graphmodel} depicts an example of a simple social network in a g
 
 \input{Chapters/graph}
 
-\subsubsection{Wide Column stores}
+\paragraph{Wide Column stores}
 
 The first column stores appeared in 1969 \cite{abadi2009column}. In 1975 was developed the second column store and the first one with application in healthcare, for store clinical records \cite{WEYL1975279}.
 

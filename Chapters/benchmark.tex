@@ -1,10 +1,13 @@
 
-\subsection{Benchmark}
+\subsection{Benchmarking DBMS}
+
+One of the harder aspects of data management is the performance analysis and tuning. For complex systems that perform high workloads on large datasets, it is particularly challenging because many factors can affect the performance. In terms of DBMS, this is done by the usage of a benchmark that allows one to evaluate the system's main performance metrics under stressful conditions \cite{10.14778/2732240.2732246}.
+
 
 Benchmarks are techniques that seek to collect and compare a wide variety of activities, to achieve the best result, an objective criterion for determining which practice or software is superior in certain scenarios that the user who
-is doing the simulation built. An example of popular questions is "Which domain is the best system?”. The SPECCpu benchmark ~\cite{henning2006spec}, for instance, addresses the question, "What is the best CPU?" "and the \gls{tpcc} ~\cite{council2010tpc} responds to the question, "What is the best OLTP database system?” ~\cite{benchmarkchen}.
+is doing the simulation built. An example of popular questions is "Which domain is the best system?”. The SPECCpu benchmark ~\cite{henning2006spec}, for instance, addresses the question, "What is the best CPU?" "and the \gls{tpcc} ~\cite{council2010tpc} responds to the question, "What is the best OLTP database system?” ~\cite{benchmarkchen,benchcloud}.
 
-For ~\citeauthor{gray} a domain-specific benchmark must meet four important criteria to be a useful benchmark. It must be:
+For \citeauthor{gray1992benchmark} a domain-specific benchmark must meet four important criteria to be a useful benchmark. It must be:
 
 \begin{itemize}
     \item \textbf{Relevant:} In performing typical operations within that problem domain, it must measure the peak performance and price/performance of systems. 
@@ -36,11 +39,11 @@ While these specifications express implementation in terms of the relational dat
 
 \gls{tpcc} uses metrics and terminology that are similar to other benchmarks originating from the TPC or others. In no way does this similarity in terminology imply that the results of \gls{tpcc} are comparable to other benchmarks. Other \gls{tpcc} results compliant with the same revision are the only benchmark results comparable to \gls{tpcc}.
 
-The performance metric reported by \gls{tpcc} is a "business throughput" measuring the number of orders processed per minute. Multiple transactions are used to simulate the business activity of processing an order, and each transaction is subject to a response time constraint. The performance metric for this benchmark is expressed in \gls{tpmc}. 
+The performance metric reported by \gls{tpcc} is a "business throughput" measuring the number of orders processed per minute. Multiple transactions are used to simulate the business activity of processing an order, and each transaction is subject to a response time constraint. The performance metric for this benchmark is expressed in transactions per minute. 
 
 \gls{tpcc} is accepted in the industry as the most credible transaction processing benchmark with a large body of results across all major hardware and database platforms. The highly tuned and optimized nature of the \gls{tpcc} configurations makes it the best candidate for study \gls{dbms} power consumption~\cite{powerconsumptiontppc}.
 
 \subsubsection{HammerDB}
 
 
-\input{Design/hammerdb}
+\input{Chapters/hammerdb}

@@ -1,0 +1,88 @@
+\chapter{EXAMPLE RUI Threats to validity}
+\label{cha:EXAMPLEThreats}
+
+
+\added{\paragraph{Conclusion Validity} This first category describes threats which may influence our capacity to draw correct conclusions \cite{wohlin2012experimentation}.}
+
+\added{\textit{Fishing} is a possible threat as one may be searching for particular results, thus making the analysis not independent \cite{wohlin2012experimentation}.
+In the case of our study, we are not evaluating a programming language(PL) that we may have proposed and hence have no particular interest in the outcome. Thus, we 
+are not searching for a particular result, and as such, this threat does not apply to our study.}
+
+\added{A common threat is the \textit{reliability of measures}. In our case, when measuring the energy consumption of the various different programming languages, other factors alongside the different implementations and actual languages themselves may contribute to variations, i.e. specific versions of an interpreter or virtual machine. To avoid this, we executed every language and benchmark solution equally. In each, we measured the energy consumption (CPU and DRAM), execution time, and peak and total memory 10 times, removed the lowest and highest 20\% outliers, and calculated the median, mean, standard deviation, min, and max values. This allowed us to minimize the particular states of the tested machine, including uncontrollable system processes and software. However, the measured results are quite consistent, and thus reliable. In addition, the used energy measurement tool has also been proven to be very accurate. }
+
+\added{Another common threat is the \textit{reliability of treatment implementation}. 
+The implementations used to evaluate the PLs were produced by external developers. We simply reused
+the settings from CLBG which were also applied to \textit{Rosetta} tasks.
+Thus, these implementations are independent from this study and are the best available
+as the CLBG is a running contest of the performance of.}
+
+\added{Regarding \textit{random heterogeneity of subjects}, we used all the available languages in the CLBG, that is, 27 different PLs.
+Although there are hundreds of languages, this set includes many popular languages and also more academic ones,
+thus covering a vast set of PLs. In fact, several communities from news pages, to social-media, to Reddit have
+found our work broad enough to be interesting.}
+
+\added{\paragraph{Internal Validity} 
+This category concerns itself with what factors may interfere with the results of our study, that is, that may 
+influence the relationship between the treatment and the outcome \cite{wohlin2012experimentation}.}
+
+\added{\textit{Instrumentation} is one of the possible causes of internal validity \cite{wohlin2012experimentation}. This refers to the
+artifacts used during the experiment. In our case, we used scripts to collect the energy, time
+and memory used during the execution of the programs. However, these are simple
+scripts used to call RAPL for measurement during the execution of programs. They were previously
+validated and tested~\cite{couto2017towards,pereira2017energy} and are also publicly available in the paper's online appendix.}
+
+%From our experiment it is clear that different programming paradigms and even languages within the same paradigm have a completely different impact on energy consumption, time, and memory. We also see interesting cases where the most energy efficient is not the fastest, and believe these results are useful for programmers. For a better comparison, we not only measured CPU energy consumption but also DRAM energy consumption. This allowed us to further understand the relationship between DRAM energy consumption and peak and total memory usage, while also understanding the behavior languages have in relation the energy usage derived from the CPU and DRAM. Additionally, the way we grouped the languages is how we consider the most natural to compare languages (by programming paradigm, and how the language is executed). Thus, this was the chosen way to present the data in the paper. Nevertheless, all the data is available and any future comparison groups such as ``.NET languages'' or ``JVM languages'' can be very easily analyzed.
+
+
+\added{\paragraph{Construct Validity} This category concerns the generalization of the results to the concept or theory behind the experiment \cite{wohlin2012experimentation}.}
+
+\added{\textit{Inadequate preoperational explication of constructs} is a possible issue related to the constructs not being well defined prior to being measured \cite{wohlin2012experimentation}. In our case we evaluated the energy, time and memory used by programs, and thus the measurements were obvious, making this issue minor or nonexistent in our study.}
+
+\added{Another possible issue is the \textit{mono-operation bias} concerned with the under-representation of a construct.
+We have used about 10 programs to evaluate each PL. These programs were proposed by others to evaluate
+the performance of PLs and thus were designed to stress the languages within the context of a contest. Thus, they seem to represent an
+interesting way of evaluating the PLs.}
+
+\added{Regarding the \textit{mono-method bias}, we have indeed used just a single tool to measure
+energy and time (RAPL), and another tool for memory (the Unix-based \texttt{time} tool).
+However, both known to be very precise for measuring energy, time, and memory, thus
+their results are reliable.}
+
+\added{The \textit{interaction of different treatments} is also a possible issue. 
+However, we have used different and independent programs to evaluate the languages.
+Between each measuring execution (as common practice in measuring energy consumption), there was a two minute idle time rest to allow the system to cool-down, as to reduce over heating (which may affect energy measurements), and to allow the system to treat garbage collecting.}
+
+%acho que já temos muita coisa...
+%Restricted generalizability across constructs - falar dos paradigmas e tipo de execução (compilada, interpertrada)
+
+%The obtained solutions were the best performing ones at the time we set up the study. As the CLBG is an ongoing ``competition'', we expect that more advanced and more efficient solutions will substitute the ones we obtained as time goes on, and even the languages' compilers might evolve. Thus this, along with measurements in different systems, might produce slightly different resulting values if replicated. Nevertheless, unless there is a huge leap within the language, the comparisons might not greatly differ.
+%Indeed, when running the second experiment with the programs from the \textit{Rosetta Code}
+%the results from the first experiment are somewhat similar. For instance, the type of language and
+%the type of execution does not influence the ranking. Nevertheless, there are some variations in the final ranking.
+
+%Albeit certain paradigms or languages could have an advantage for certain problems, and others may be implemented in a not so traditional sense. Nevertheless, there is no basis to suspect that these projects are best or worst than any other kind we could have used. In any case, the second set of
+%programs we used (from the \textit{Rosetta Code}) has no restrictions which means the programs may 
+%be written using more common dialects of each language (e.g. the use of lazyness in Haskell or external libraries in Python). This repository has however other limitations such as the fact that anyone can submit a solution without any time of validation. 
+%Nevertheless, for each task we used the closest implementation
+%to the remaining ones so we could have comparable implementations. We have also compared the results of
+%each implementation guaranteeing they are correct.
+
+
+\added{\paragraph{External Validity} This type of threat is concerned with the generalization of the results to an industrial setting \cite{wohlin2012experimentation}.}
+
+\added{A common threat is termed \textit{interaction of selection and treatment} meaning the population chosen is not representative, in our case the PLs \cite{wohlin2012experimentation}.
+In the first study we analyzed 27 different programming languages. These PLs include popular languages among industry such as C/C++, Java, C\#, JavaScript, Ruby, PHP or Python\footnote{See \url{http://pypl.github.io/PYPL.html} for a list of popular languages based on Google searches.}. Thus, our study applies also to an industrial setting, at least regarding the PLs used.}
+
+\added{Another external threat is the \textit{interaction of setting and treatment}, that is, the experimental setting might not represent the industrial setting.
+Each PL was evaluated with roughly 10 solutions to the proposed problems, totaling out to almost 270 different cases. The implementation solutions we measured were developed by external experts in each of the programming languages, with the main goal of ``winning'' by producing the best solution for performance time. 
+While the different languages contain different implementations, they were written under the same rules, all produced the same exact output, and were implemented to be the fastest and most efficient as possible. Having these different yet efficient solutions for the same scenarios allows us to compare the different programming languages in a quite just manner as they were all placed against the same problems. 
+Moreover, the compilers and computers used are recent and thus in line with nowadays industry.
+For the \textit{Rosetta} the solutions are not so curated. In any case, the authors have reviewed and used
+solutions that were correct thus solving the underlying problem.}
+
+\added{While our benchmarking system is server based, studies have shown that there is no statistical difference between server platforms and embedded systems in regards to energy based readings~\cite{georgiou2018your}, thus the results can be generalized directly to embedded systems. In regards to the generalization to mobile systems, this can not be completely assured as results differ slightly between server/embedded based systems and mobile, and sometimes even between independent studies in mobile, if analyzing on a small scale. Overall however, the results seem to maintain their tendencies~\cite{lima2016haskell,oliveira2017study}}
+
+\added{In general, in this category of threats it is paramount to report the characteristics of the experiment in order
+to understand its applicability to other contexts \cite{wohlin2012experimentation}.The actual approach and methodology we used also favors easy replications. This can be attributed to the CLBG containing most of the important information needed to run the experiments, these being: the source code, compiler version, and compilation/execution options. Moreover, all the material used and produced is publicly available at \url{https://sites.google.com/view/energy-efficiency-languages}.
+Thus we believe these results can be further generalized, and other researchers and industry can replicate our methodology for future work.}
+

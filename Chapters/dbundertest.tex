@@ -1,0 +1,34 @@
+\section{Databases Under Test}
+\label{sc:dbtest}
+
+
+In our digital information age, where more and more information (only) exists in digital form (see, for example: how photography evolved in the last two decades), databases are a vital part of all types and organization sizes (from small to large)~\cite{10.14778/2732240.2732246}. Moreover, data centers are also becoming an increasingly critical part of the infrastructure in our digitalized society. As a consequence of the concern with energy expenditure, a company/software engineer needs to understand their scenario and select the fitting DBMS that combines runtime performance with energy efficiency.
+
+Although there is extensive (research) work on analyzing and benchmarking the runtime performance of DBMS\cite{10.14778/1920841.1920902,seybold2019mowgli,stonebraker2010mapreduce,10.1145/2452376.2452448}, there is still a lack of knowledge on the energy efficiency of the different DBMS that supports the data centers. In this thesis, we decide to compare four well-known and widely used DBMS: \textit{MySQL}, \textit{MariaDB}, \textit{Postgres}, and \textit{Redis}. Our decision on the DBMS was also based on whether the HammerDB supported it.
+
+\subsection{MySQL}
+
+The first DBMS chosen was MySQL. MySQL is the most popular open-source relational DBMS in the market and is known for providing high-performance, robust SQL, multi-threaded, multi-user access to several databases. Allan Larsson and Michael Widenius created MySQL in 1995, and now it is owned by Oracle Corporation. Some of its customers include GitHub, Uber, NASA, Tesla, Netflix. 
+
+MySQL's other features are: high compatibility, high portability, usage of fast B-tree disk tables with index compression, provides transactional and nontransactional storage engines, thread-based memory allocation system, optimized nested-loop join, in-memory hash tables used for temporary tables, and other things.
+
+\subsection{MariaDB}
+
+Another DBMS chosen was MariaDB. MariaDB is a popular open-source relational DBMS. The original developers of MySQL in 2009 made MariaDB ensure a free and open-source DBMS. Originally designed as an enhanced, drop-in replacement for MySQL, MariaDB is a fast, scalable, and many other tools that make it very versatile for a wide variety of use cases.
+
+Since MariaDB is built on top of the latest version of MySQL, it has most of the features of MySQL and high compatibility between them. MariaDB provides some improvements from MySQL like more Storage Engines, some Speed Improvements like parallel replication, better testing, and other things.
+
+\subsection{Postgres}
+
+The last relational DBMS chosen was Postgres. Postgres is an open-source object-relational DBMS that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workload. PostgreSQL started its development in 1986 at the University of California and has more than 30 years of active development on the core platform.
+
+PostgreSQL's main attraction is its architecture, consistency, data integrity, robust feature set, extensibility, and the open-source community's commitment to delivering efficiency and creative solutions consistently. PostgreSQL is currently used in several research applications and comes with several add-ons, such as the popular PostGIS geospatial database extender. PostGIS is widely used for geographic data, and in many universities, they use as an educational tool due to its open-source code. It has some object-oriented features, such as inheritance and custom types, in addition to the characteristics of a relational DBMS.
+
+
+\subsection{Redis}
+
+The last DBMS chosen was Redis. Redis is an open-source non-relational DBMS of the type key-value that supports in-memory data structure store, used as a database, cache, and message broker \cite{da2015redis}.
+Redis is a well-established open-source project, and many companies use Redis like Twitter, Tumblr, Instagram, Flick, and The New York Times. Redis is one of the most popular non-relational DBMS in the market\cite{da2015redis}.
+Redis is known for its fast key-value database that stores a mapping of keys to five types of values: strings, lists, sets, hashes, sorted sets \cite{10.55552505464,redis}. It supports in-memory persistent storage at the disk, replication to scale read performance, and client-side sharding to scale write performance. Depending on the use case, the persisted data are either periodically dumped to disk or appending each command to a disk-based log. Redis also provides asynchronous replication\cite{10.55552505464,redis}. 
+
+Additionally, Redis has configurable key expiration, transaction, and publish/subscribe features. It also provides Lua scripting to create new commands. With these tools, it makes a very versatile database\cite{da2015redis,redis}.

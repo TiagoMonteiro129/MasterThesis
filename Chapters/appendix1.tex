@@ -4,7 +4,154 @@
 %%
 %% Chapter with example of appendix with a short dummy text
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Appendix 1 Lorem Ipsum}
-\label{app:lorem_ipsum1}
+\chapter{10 minutes Benchmark Results}
+\label{app:10mBench}
 
-\lipsum[1-5]
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{results/median/10m/energy.png}
+\caption{Median of energy consumption on Package, Disk and Total.}
+\label{fig:medianenergy10m}
+\end{figure}
+
+
+   \begin{figure*}[h]
+        \centering
+        \begin{subfigure}[b]{0.33\textwidth}
+            \centering
+			\includegraphics[width=1\columnwidth]{results/boxplot/10m/Packgage.png}
+			\caption[Distribution of energy consumed on Package]%
+            {{\small Distribution of energy consumed on Package}}    
+			\label{fig:bocplotyenergyPackage10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.33\textwidth}   
+            \centering 
+            \includegraphics[width=1\columnwidth]{results/boxplot/10m/Disk.png}
+            \caption[Distribution of energy consumed on Disk]%
+            {{\small Distribution of energy consumed on Disk}}    
+            \label{fig:bocplotyenergydisk10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.33\textwidth}   
+            \centering 
+			\includegraphics[width=1\columnwidth]{results/boxplot/10m/Total.png}
+            \caption[Distribution of energy consumed on Overall System]%
+            {{\small Distribution of energy consumed on Overall System}}    
+            \label{fig:bocplotyenergytotal10m}
+        \end{subfigure}
+        \caption[ Distribution of energy consumed ]
+        {\small Distribution of energy consumed} 
+        \label{fig:bocplotyenergy10m}
+    \end{figure*}
+
+
+%%% HAMMERDB %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.8\columnwidth]{results/median/10m/hammerdb.png}
+\caption{Median of HammerDB results.}
+\label{fig:medianhammerdb10m}
+\end{figure}
+
+   \begin{figure*}[!ht]
+        \centering
+        \begin{subfigure}[b]{0.33\textwidth}
+            \centering
+			\includegraphics[width=1\columnwidth]{results/boxplot/10m/TPM.png}
+			\caption[]%
+            {{\small Distribution of TPM}}    
+			\label{fig:bocplothammerTPM10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.33\textwidth}  
+            \centering 
+            \includegraphics[width=1\columnwidth]{results/boxplot/10m/NOPM.png}
+            \caption[]%
+            {{\small Distribution of NOPM}}    
+            \label{fig:bocplothammerNOPM10m}
+        \end{subfigure}
+        \vskip\baselineskip
+        \caption[ Distribution of performance on HammerDB results]
+        {\small Distribution of HammerDB results} 
+        \label{fig:bocplothammer10m}
+    \end{figure*}
+
+
+
+%%% ENERGY TPM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.8\columnwidth]{results/median/10m/energy-tpm.png}
+\caption{Median of energy consumption per TPM}
+\label{fig:mediantpmenergy10m}
+\end{figure}
+
+
+\begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+			\includegraphics[width=1\columnwidth]{results/boxplot/10m/Packgage-tpm.png}
+			\caption[]%
+            {{\small Energy consumption on Package per TPM}}    
+			\label{fig:bocplottranspackage10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\textwidth}  
+            \centering 
+            \includegraphics[width=1\columnwidth]{results/boxplot/10m/Disk-tpm.png}
+            \caption[]%
+            {{\small Energy consumption on Disk per TPM}}    
+            \label{fig:bocplottransdisk10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\textwidth}  
+            \centering 
+            \includegraphics[width=1\columnwidth]{results/boxplot/10m/total-tpm.png}
+            \caption[]%
+            {{\small Energy consumption on Overall System per TPM}}    
+            \label{fig:bocplottranstotal10m}
+        \end{subfigure}
+        \caption[ Distribution of Energy consumption per TPM  ]
+        {\small Distribution Energy consumption per TPM } 
+        \label{fig:bocplottrans10m}
+    \end{figure}
+   
+
+
+
+
+%%% ENERGY NOPM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.8\columnwidth]{results/median/10m/energy-nopm.png}
+\caption{Median of energy consumption per NOPM}
+\label{fig:mediannopmenergy10m}\end{figure}
+
+\begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+			\includegraphics[width=1\columnwidth]{results/boxplot/10m/Packgage-nopm.png}
+			\caption[]%
+            {{\small Energy consumption on Package per NOPM}}    
+			\label{fig:bocplotnopmpackage10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\textwidth}  
+            \centering 
+            \includegraphics[width=1\columnwidth]{results/boxplot/10m/Disk-nopm.png}
+            \caption[]%
+            {{\small Energy consumption on Disk per NOPM}}    
+            \label{fig:bocplotnopmdisk10m}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\textwidth}  
+            \centering 
+                \includegraphics[width=1\columnwidth]{results/boxplot/10m/total-nopm.png}
+            \caption[]%
+            {{\small Energy consumption on Overall System per NOPM}}    
+            \label{fig:bocplotnopmtotal10m}
+        \end{subfigure}
+        \caption[ Distribution of energy consumption per NOPM ]
+        {\small Distribution of energy consumption per NOPM} 
+        \label{fig:bocplotnumber10m}
+    \end{figure}

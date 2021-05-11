@@ -1150,7 +1150,91 @@
 \InputIfFileExists{novathesis-files/FontStyles/\novathesis@opt@fontstyle.clo}{}{}
 
 
+% Settings for Listings
 
+\definecolor{lightgray}{gray}{0.96}
+\definecolor{gray_ulisses}{gray}{0.55}
+\definecolor{castanho_ulisses}{rgb}{0.71,0.33,0.14}
+\definecolor{preto_ulisses}{rgb}{0.41,0.20,0.04}
+\definecolor{green_ulises}{rgb}{0.2,0.75,0}
+
+\definecolor{midnightblue}{rgb}{0.2,0.2,0.7}
+\definecolor{dkblue}{rgb}{0,0,0.6}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{listinggray}{gray}{0.92}
+
+% Settings for Listings
+\lstset{ 
+    basicstyle=\ttfamily, 
+    xleftmargin=\parindent,
+    keywordstyle=\bfseries\color{dkblue}, 
+    identifierstyle=\ttfamily,
+    commentstyle=\bfseries\color{gray}\textsl,
+    %commentstyle=\itshape\color{black},
+    stringstyle=\color{magenta}\upshape,
+    emphstyle=\color{red},
+    emphstyle={[2]\color{blue}},
+    texcl=false,
+    showspaces=false,
+    showstringspaces=false,
+    numbers=right,
+    numberstyle=\footnotesize,
+    numbersep=0pt,
+    breaklines=true,
+    tabsize=4,
+    backgroundcolor=\color{white},
+    frame=L
+}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries\color{dkblue}, 
+    commentstyle=\bfseries\color{gray}\textsl,
+  identifierstyle=\color{black},
+  stringstyle=\color{gray},
+}
+
+\lstdefinestyle{customasm}{
+  belowcaptionskip=1\baselineskip,
+  frame=L,
+  xleftmargin=\parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+    commentstyle=\bfseries\color{gray}\textsl,
+}
+
+\lstset{escapechar=@,style=customc}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mGray},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
 
 \novathesisExecuteAtEndClassFile
 
@@ -1160,3 +1244,5 @@
 %
 % See file "novathesis-files/spine.clo"
 % This file is loaded only if otion "spine=true"  :)
+
+
