@@ -7,3 +7,8 @@ The growing reliance on cloud construction services is one of the main reasons f
 This master thesis intends to tackle this lack of knowledge by analyzing the energy consumption of DBMS software. Through benchmarks that simulate real usage environments, this research plays a key role in improving the knowledge on the energy efficiency of DBMS. We analyze four systems, namely MySQL, Postgres, MariaDB, and Redis. Moreover, we use the HammerDB benchmark framework for the simulation of DBMS in a real environment. Thus, to have a precise knowledge of the energy consumption of DBMS, we analyze the energy consumption in various subsystems of the computer, namely like CPU, DRAM, GPU, and Disk. Moreover, we present further analysis of the energy consumption per performance ratio in all subsystems levels. 
 
 Our results show that, indeed, there are significant differences in the energy consumption of which DBMS and that in some scenarios, the one with better run time performance is not what consumes more energy.
+
+#Note
+
+All the developed/used software here in this repository:
+https://github.com/greensoftwarelab/GreenSGDBS
