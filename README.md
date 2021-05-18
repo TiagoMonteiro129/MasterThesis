@@ -8,7 +8,7 @@ This master thesis intends to tackle this lack of knowledge by analyzing the ene
 
 Our results show that, indeed, there are significant differences in the energy consumption of which DBMS and that in some scenarios, the one with better run time performance is not what consumes more energy.
 
-#Note
+# Note
 
 All the developed/used software here in this repository:
 https://github.com/greensoftwarelab/GreenSGDBS
